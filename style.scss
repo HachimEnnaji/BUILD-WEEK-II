@@ -1,0 +1,12 @@
+$n1: 400;
+$n2: 500;
+$n3: 200;
+
+body {
+  font-family: "Circular";
+  font-weight: $n3;
+}
+#dinamicList {
+  height: 50vh;
+  overflow: auto;
+}

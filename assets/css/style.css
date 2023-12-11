@@ -1,1 +1,9 @@
-/*# sourceMappingURL=style.css.map */
+body {
+  font-family: "Circular";
+  font-weight: 200;
+}
+
+#dinamicList {
+  height: 50vh;
+  overflow: auto;
+}/*# sourceMappingURL=style.css.map */

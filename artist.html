@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
+
+    <!-- style -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/circular-font.css" />
+    
+
+    <title>Spotify - Clone</title>
+  </head>
+  <body class="bg-dark">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- sidebar sx -->
+
+        <div class="col-3 bg-danger">
+          <div class="container-fluid">
+            <div>
+              <i class="bi bi-three-dots"></i>
+              <ul class="list-unstyled">
+                <li class="list-item"><i class="bi bi-house-door-fill text-white text-opacity-50"></i> Home</li>
+                <li class="list-item"><i class="bi bi-search text-white text-opacity-50"></i> Crea</li>
+                <li class="list-item">
+                  <svg
+                    data-encore-id="icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    width="15"
+                    height="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <!-- Il contenuto del tuo SVG va qui -->
+
+                    <path
+                      d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"
+                      fill="#EE9AA2"
+                    ></path>
+                  </svg>
+                  La tua libreria
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="list-unstyled">
+                <li class="list-item">
+                  <i class="bi bi-plus-square-fill text-white text-opacity-50"></i> Crea playlist
+                </li>
+                <li class="list-item"><i class="bi bi-bag-heart-fill text-opacity-50"></i> Brani che ti piacciono</li>
+                <li class="list-item"><i class="bi bi-bookmark-fill text-opacity-50"></i> I tuoi episodi</li>
+                <hr />
+              </ul>
+            </div>
+            <div id="dinamicList">
+              <!-- seconda sidebar srollabile sotto al menu a sx -->
+
+              <ul>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- sidebar centrale -->
+
+        <div class="col">
+          <div class="container-fluid text-white h-50" style="background:linear-gradient(to bottom, #00000000 30%, #000000ff), url('./assets/imgs/back-view-crowd-fans-live-perf.jpg'); background-position: center">
+
+              <!-- arrows -->
+              <div class="container-fluid d-flex justify-content-between">
+                  <div class="container-fluid">
+                      <a href="#" class="badge link-light rounded-circle bg-dark px-1"><i class="bi bi-chevron-left"></i></a>
+                      <a href="#" class="badge link-secondary rounded-circle bg-dark bg-opacity-75 px-1 ms-2"><i class="bi bi-chevron-right"></i></a>
+                  </div>
+                  <div class="container text-end">
+                    <span class="badge rounded-pill bg-dark fw-normal">account <i class="bi bi-caret-down-fill ps-2"></i></span>
+                  </div>
+              </div>
+              <!-- / arrows -->
+              <!-- hero -->
+              <div class="d-flex flex-column justify-content-end h-100 pb-4">
+                <span class="badge text-start fw-normal m-0 px-0 py-2"><i class="bi bi-check-lg bg-primary rounded-circle p-1 me-2"></i>Artista verificato</span>
+                <h2 class="display-3 fw-bold">Yellowcard</h2>
+                <p class="badge text-start fw-normal p-0">3.433.158 ascoltatori mensili</p>
+
+              </div>
+               <!-- / hero -->
+               <!-- play -->
+
+               <div class="d-flex align-items-center">
+                <button class="rounded-circle border-0 bg-success p-0"><i class="bi bi-play-fill fs-3 align-text-top px-2"></i></button>
+                <span class="badge text-bg-dark border border-2 text-uppercase mx-3">Following</span>
+                <i class="bi bi-three-dots"></i>
+
+               </div>
+               <!-- / play -->
+               <!-- liste -->
+
+
+                <div class="row justify-content-between mt-3">
+                  <div class="col-7 p-0">
+                    <h6>Popolari</h6>
+                    <div class="row mt-3 align-items-center">
+                      <!-- 1 -->
+                      <div class="col-1 text-end p-0 pe-2"><span class="badge fw-normal">1</span></div>
+                      <div class="col-1 p-0 my-1"><img height="40px" src="./assets/imgs/main/image-1.jpg" alt="song cover"></div>
+                      <div class="col-5 p-0"><span class="badge">Title</span></div>
+                      <div class="col-2 text-end p-0"><span class="badge fw-normal">123.456</span></div>
+                      <div class="col-3 text-end p-0"><span class="badge fw-normal">3:18</span></div>
+                      <!-- / 1 -->
+                      <!-- 2 -->
+                      <div class="col-1 text-end p-0 pe-2"><span class="badge fw-normal">2</span></div>
+                      <div class="col-1 p-0 my-1"><img height="40px" src="./assets/imgs/main/image-1.jpg" alt="song cover"></div>
+                      <div class="col-5 p-0"><span class="badge">Title</span></div>
+                      <div class="col-2 text-end p-0"><span class="badge fw-normal">123.456</span></div>
+                      <div class="col-3 text-end p-0"><span class="badge fw-normal">3:18</span></div>
+                      <!-- / 2 -->
+                      <!-- 3 -->
+                      <div class="col-1 text-end p-0 pe-2"><span class="badge fw-normal">3</span></div>
+                      <div class="col-1 p-0 my-1"><img height="40px" src="./assets/imgs/main/image-1.jpg" alt="song cover"></div>
+                      <div class="col-5 p-0"><span class="badge">Title</span></div>
+                      <div class="col-2 text-end p-0"><span class="badge fw-normal">123.456</span></div>
+                      <div class="col-3 text-end p-0"><span class="badge fw-normal">3:18</span></div>
+                      <!-- / 3 -->
+                      <!-- 4 -->
+                      <div class="col-1 text-end p-0 pe-2"><span class="badge fw-normal">4</span></div>
+                      <div class="col-1 p-0 my-1"><img height="40px" src="./assets/imgs/main/image-1.jpg" alt="song cover"></div>
+                      <div class="col-5 p-0"><span class="badge">Title</span></div>
+                      <div class="col-2 text-end p-0"><span class="badge fw-normal">123.456</span></div>
+                      <div class="col-3 text-end p-0"><span class="badge fw-normal">3:18</span></div>
+                      <!-- / 4 -->
+                      <!-- 5 -->
+                      <div class="col-1 text-end p-0 pe-2"><span class="badge fw-normal">5</span></div>
+                      <div class="col-1 p-0 my-1"><img height="40px" src="./assets/imgs/main/image-1.jpg" alt="song cover"></div>
+                      <div class="col-5 p-0"><span class="badge">Title</span></div>
+                      <div class="col-2 text-end p-0"><span class="badge fw-normal">123.456</span></div>
+                      <div class="col-3 text-end p-0"><span class="badge fw-normal">3:18</span></div>
+                      <!-- / 5 -->
+  
+                      </div>
+                    </div>
+                  
+                  <div class="col-4 p-0">
+                    <h6>Brani che ti piacciono</h6>
+                    <div class="row mt-3 align-items-center">
+                      <div class="col-2">
+                        <div class="position-relative">
+                          <img class="rounded-circle" height="50px" src="./assets/imgs/main/image-1.jpg" alt="song cover">
+                          <span class="position-absolute bg-success border border-light rounded-circle" style="left: 30px; top: 30px;">
+                            <span class="badge p-1"><i class="bi bi-heart-fill"></i></span>
+                          </span>
+                        </div>
+                        
+                      </div>
+                      <div class="col">
+                        <p class="d-block text-start badge px-0 m-0">Hai messo Mi piace a 11 brani</p>
+                        <p class="d-block text-start badge fw-light px-0 m-0">Di Yellowcard</p>
+                      </div>
+                    </div>
+                  
+                  </div>
+                </div>
+
+
+               
+
+                <!-- / liste -->
+               
+               
+      
+              
+      
+              
+          </div>
+      </div>
+
+        <!-- terza colonna con con attività-->
+
+        <!-- bottone -->
+        <div class="col-1" id="col-right-sidebar">
+          <button type="button" class="btn btn-primary" id="btn-right-sidebar">Amici</button>
+
+        <!-- --- sidebar --- -->
+          <div class="d-none bg-warning" id="right-sidebar">
+            
+            <div class="container d-flex justify-content-between">
+              <div class="pt-2"><h6>Attività amici</h6></div>
+              <div><i class="bi bi-person-plus px-3 fs-4"></i><i class="bi bi-x-lg fs-4" id="close-right-sidebar"></i></div>
+            </div>
+            <div class="container mt-3">
+              <div class="d-flex justify-content-between">
+                <div class="h-100 pt-1">
+                  <img src="./assets/imgs/main/image-11.jpg" class="rounded-pill" width="40px" alt="" />
+                </div>
+                <div>
+                  <p class="m-0 ps-3">lorem provo con</p>
+                  <p class="m-0 ps-3">lorem un testo</p>
+                  <p class="m-0 ps-3">lorem</p>
+                </div>
+                <div>
+                  <p class="ms-5 text-end badge">4 ore</p>
+                </div>
+              </div>
+            </div>
+            <div class="container mt-3">
+              <div class="d-flex justify-content-between">
+                <div class="h-100 pt-1">
+                  <img src="./assets/imgs/main/image-11.jpg" class="rounded-pill" width="40px" alt="" />
+                </div>
+                <div>
+                  <p class="m-0 ps-3">lorem provo con</p>
+                  <p class="m-0 ps-3">lorem un testo</p>
+                  <p class="m-0 ps-3">lorem</p>
+                </div>
+                <div>
+                  <p class="ms-5 text-end badge">4 ore</p>
+                </div>
+              </div>
+            </div>
+            <div class="container mt-3">
+              <div class="d-flex justify-content-between">
+                <div class="h-100 pt-1">
+                  <img src="./assets/imgs/main/image-11.jpg" class="rounded-pill" width="40px" alt="" />
+                </div>
+                <div>
+                  <p class="m-0 ps-3">lorem provo con</p>
+                  <p class="m-0 ps-3">lorem un testo</p>
+                  <p class="m-0 ps-3">lorem</p>
+                </div>
+                <div>
+                  <p class="ms-5 text-end badge">4 ore</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- --- / sidebar --- -->
+
+
+        </div>
+        <!-- / bottone -->
+
+        
+
+      </div>
+
+      <!-- --- -->
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const closeButton = document.getElementById("close-right-sidebar");
+        const contentContainer = document.getElementById("right-sidebar");
+        const colRightSidebar = document.getElementById("col-right-sidebar");
+
+        closeButton.addEventListener("click", function () {
+          contentContainer.classList.add("d-none");
+          colRightSidebar.classList.add("col-1");
+          colRightSidebar.classList.remove("col-2");
+          showButton.classList.remove("d-none");
+        });
+
+        const showButton = document.getElementById("btn-right-sidebar");
+        showButton.addEventListener("click", function () {
+          contentContainer.classList.remove("d-none");
+
+          colRightSidebar.classList.remove("col-1");
+          colRightSidebar.classList.add("col-2");
+
+          showButton.classList.add("d-none");
+
+        });
+      });
+    </script>
+  </body>
+</html>

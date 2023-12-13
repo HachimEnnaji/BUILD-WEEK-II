@@ -59,8 +59,8 @@ const indexRandom = (array) => {
   const index = Math.floor(Math.random() * array.length);
   return index;
 };
-
-const UrlArtist = URL + search + arrArtist[indexRandom(arrArtist)];
+const params = arrArtist[indexRandom(arrArtist)];
+const UrlArtist = URL + search + params;
 
 console.log(UrlArtist);
 
@@ -74,15 +74,26 @@ fetch(UrlArtist, options)
   })
   .then((data) => {
     const selection = data.data[1];
-    console.log(UrlArtist);
-    const img = document.getElementById("albumImg");
+    // console.log(UrlArtist);
+    // const img = document.getElementById("albumImg");
     const title = document.getElementById("albumTitle");
     const artist = document.getElementById("albumArtist");
     const textArtist = document.getElementById("textArtist");
-    img.setAttribute("src", `${selection.album.cover_big}`);
-    title.innerHTML = `${selection.album.title}`;
-    artist.innerHTML = `${selection.artist.name}`;
-    textArtist.innerHTML = `${selection.artist.name}`;
+    const linkArtistImg = document.getElementById("linkArtistImg");
+    linkArtistImg.innerHTML = `<a  class="text-decoration-none" href="./artist.html?q=${params}"><img src="${selection.album.cover_big}" alt="album foto" class="img-fluid" id="albumImg" /></a>`;
+    title.innerHTML = `<a  class="text-decoration-none" href="./artist.html?q=${params}">${selection.album.title}</a>`;
+    artist.innerHTML = `<a class="text-decoration-none"  href="./artist.html?q=${params}">${selection.artist.name}</a>`;
+    textArtist.innerHTML = `<a class="text-decoration-none"  href="./artist.html?q=${params}">${selection.artist.name}</a>`;
+    const albums = document.querySelectorAll(".album");
+    console.log(albums);
+    albums.forEach((album, indexOfArray) => {
+      const albumImage = album.querySelector("img");
+      const albumText = album.querySelector(".card-text");
+      const link = album.querySelector(".link");
+      link.setAttribute("href", "./artist.html?id=" + data.data[indexOfArray].album.id);
+      albumImage.setAttribute("src", `${data.data[indexOfArray].album.cover_big}`);
+      albumText.innerHTML = `${data.data[indexOfArray].title}`;
+    });
   })
   .catch((Error) => {
     console.log("error" + Error);

@@ -20,7 +20,6 @@ const arrayAlbumID = [
 const greetings = () => {
   const greetings = document.getElementById("greetings");
   const currentHour = new Date().getHours();
-  console.log(currentHour);
   if (currentHour >= 5 && currentHour < 15) {
     greetings.innerHTML = "Buongiorno";
   } else if (currentHour >= 15 && currentHour < 18) {
@@ -62,7 +61,9 @@ const indexRandom = (array) => {
 };
 
 const UrlArtist = URL + search + arrArtist[indexRandom(arrArtist)];
+
 console.log(UrlArtist);
+
 fetch(UrlArtist, options)
   .then((response) => {
     if (!response.ok) {
@@ -72,8 +73,8 @@ fetch(UrlArtist, options)
     }
   })
   .then((data) => {
-    const selection = data.data[0];
-
+    const selection = data.data[1];
+    console.log(UrlArtist);
     const img = document.getElementById("albumImg");
     const title = document.getElementById("albumTitle");
     const artist = document.getElementById("albumArtist");
@@ -87,25 +88,6 @@ fetch(UrlArtist, options)
     console.log("error" + Error);
   });
 
-// fetch(URL + playlist + arrayAlbumID[indexRandom(arrayAlbumID)], options)
-//   .then((response) => {
-//     if (!response.ok) {
-//       throw new Error("Error" + response.status);
-//     } else {
-//       return response.json();
-//     }
-//   })
-//   .then((playlist) => {
-//     // console.log(playlist);
-//     const div = document.querySelectorAll(".playlist img");
-//     div.forEach((element) => {
-//       element.setAttribute("src", `${playlist.picture_big}`);
-//       //   console.log(element);
-//     });
-//   })
-//   .catch((Error) => {
-//     console.log("error" + Error);
-//   });
 const div = document.querySelectorAll(".playlist");
 div.forEach((element) => {
   //   console.log(playlist.childNodes);

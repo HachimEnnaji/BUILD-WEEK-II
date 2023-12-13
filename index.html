@@ -120,7 +120,7 @@
                 <!-- hero divisa in 3 parte 1: immagine -->
                 <div class="col-3">
                   <div class="container h-100 w-100 d-flex align-items-center">
-                    <img src="./assets/imgs/main/image-1.jpg" alt="album foto" class="overflow-hidden" />
+                    <img src="./assets/imgs/main/image-1.jpg" alt="album foto" class="overflow-hidden" id="albumImg" />
                   </div>
                 </div>
 
@@ -129,9 +129,9 @@
                 <div class="col">
                   <div class="container">
                     <h3 class="text-uppercase">album</h3>
-                    <h2>VIOLA (feat.Salmo)</h2>
-                    <p>Fedez, Salmo</p>
-                    <p>Ascolta il nuovo singolo di Fedez e Salmo</p>
+                    <h2 id="albumTitle">VIOLA (feat.Salmo)</h2>
+                    <p id="albumArtist">Fedez, Salmo</p>
+                    <p>Ascolta il nuovo singolo di <span id="textArtist">Fedez e Salmo</span></p>
                     <div class="container-fluid p-2">
                       <button class="btn btn-success text-dark rounded-pill px-4">Play</button
                       ><button class="btn btn-dark border-1 border-white rounded-pill px-4 mx-3">Salva</button>
@@ -154,10 +154,10 @@
             </div>
             <!-- seconda row parte centrale sezione playlist -->
             <div>
-              <div><h2>Buonasera</h2></div>
+              <div id="greetings"><h2>Buonasera</h2></div>
               <div class="row row-cols-2 row-cols-md-3 text-light gy-3">
                 <div class="col">
-                  <div class="bg-dark d-flex">
+                  <div class="bg-dark d-flex playlist">
                     <img height="100px" src="./assets/imgs/main/image-2.jpg" alt="playlist" />
                     <div class="d-flex align-items-center px-2">
                       <p>lorem</p>
@@ -165,7 +165,7 @@
                   </div>
                 </div>
                 <div class="col">
-                  <div class="bg-dark d-flex">
+                  <div class="bg-dark d-flex playlist">
                     <img height="100px" src="./assets/imgs/main/image-2.jpg" alt="playlist" />
                     <div class="d-flex align-items-center px-2">
                       <p>lorem</p>
@@ -173,7 +173,7 @@
                   </div>
                 </div>
                 <div class="col">
-                  <div class="bg-dark d-flex">
+                  <div class="bg-dark d-flex playlist">
                     <img height="100px" src="./assets/imgs/main/image-2.jpg" alt="playlist" />
                     <div class="d-flex align-items-center px-2">
                       <p>lorem</p>
@@ -181,7 +181,7 @@
                   </div>
                 </div>
                 <div class="col">
-                  <div class="bg-dark d-flex">
+                  <div class="bg-dark d-flex playlist">
                     <img height="100px" src="./assets/imgs/main/image-2.jpg" alt="playlist" />
                     <div class="d-flex align-items-center px-2">
                       <p>lorem</p>
@@ -189,7 +189,7 @@
                   </div>
                 </div>
                 <div class="col">
-                  <div class="bg-dark d-flex">
+                  <div class="bg-dark d-flex playlist">
                     <img height="100px" src="./assets/imgs/main/image-2.jpg" alt="playlist" />
                     <div class="d-flex align-items-center px-2">
                       <p>lorem</p>
@@ -197,7 +197,7 @@
                   </div>
                 </div>
                 <div class="col">
-                  <div class="bg-dark d-flex">
+                  <div class="bg-dark d-flex playlist">
                     <img height="100px" src="./assets/imgs/main/image-2.jpg" alt="playlist" />
                     <div class="d-flex align-items-center px-2">
                       <p>lorem</p>
@@ -274,12 +274,13 @@
         <div class="col-1" id="col-right-sidebar">
           <button type="button" class="btn btn-primary" id="btn-right-sidebar">Amici</button>
 
-        <!-- --- sidebar --- -->
+          <!-- --- sidebar --- -->
           <div class="d-none bg-warning" id="right-sidebar">
-            
             <div class="container d-flex justify-content-between">
               <div class="pt-2"><h6>Attività amici</h6></div>
-              <div><i class="bi bi-person-plus px-3 fs-4"></i><i class="bi bi-x-lg fs-4" id="close-right-sidebar"></i></div>
+              <div>
+                <i class="bi bi-person-plus px-3 fs-4"></i><i class="bi bi-x-lg fs-4" id="close-right-sidebar"></i>
+              </div>
             </div>
             <div class="container mt-3">
               <div class="d-flex justify-content-between">
@@ -329,48 +330,17 @@
           </div>
 
           <!-- --- / sidebar --- -->
-
-
         </div>
         <!-- / bottone -->
-
-        
-
       </div>
 
       <!-- --- -->
-      </div>
     </div>
-    <script src="./js/index.js"></script>
+    <script type="module" src="./js/index.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const closeButton = document.getElementById("close-right-sidebar");
-        const contentContainer = document.getElementById("right-sidebar");
-        const colRightSidebar = document.getElementById("col-right-sidebar");
-
-        closeButton.addEventListener("click", function () {
-          contentContainer.classList.add("d-none");
-          colRightSidebar.classList.add("col-1");
-          colRightSidebar.classList.remove("col-2");
-          showButton.classList.remove("d-none");
-        });
-
-        const showButton = document.getElementById("btn-right-sidebar");
-        showButton.addEventListener("click", function () {
-          contentContainer.classList.remove("d-none");
-
-          colRightSidebar.classList.remove("col-1");
-          colRightSidebar.classList.add("col-2");
-
-          showButton.classList.add("d-none");
-
-        });
-      });
-    </script>
   </body>
 </html>

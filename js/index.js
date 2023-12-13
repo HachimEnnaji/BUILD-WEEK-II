@@ -75,10 +75,17 @@ fetch(URL + search + arrArtist[indexRandom(arrArtist)], options)
 //     console.log("error" + Error);
 //   });
 const div = document.querySelectorAll(".playlist");
+<<<<<<< HEAD
 div.forEach((element, indexofArray) => {
   //   console.log(playlist.childNodes);
   const divImg = document.querySelectorAll(".playlist img")[indexofArray];
   const divText = document.querySelectorAll(".playlist div p")[indexofArray];
+=======
+div.forEach((element) => {
+  //   console.log(playlist.childNodes);
+  const divImg = element.querySelector(" img");
+  const divText = element.querySelector(" p");
+>>>>>>> develop-js
   //   console.log(divText);
   fetch(URL + playlist + arrayAlbumID[indexRandom(arrayAlbumID)], options)
     .then((response) => {

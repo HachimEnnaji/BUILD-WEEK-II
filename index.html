@@ -270,75 +270,58 @@
 
         <!-- terza colonna con con attività-->
 
-        <!-- bottone -->
-        <div class="col-1" id="col-right-sidebar">
-          <button type="button" class="btn btn-primary" id="btn-right-sidebar">Amici</button>
-
-        <!-- --- sidebar --- -->
-          <div class="d-none bg-warning" id="right-sidebar">
-            
-            <div class="container d-flex justify-content-between">
-              <div class="pt-2"><h6>Attività amici</h6></div>
-              <div><i class="bi bi-person-plus px-3 fs-4"></i><i class="bi bi-x-lg fs-4" id="close-right-sidebar"></i></div>
-            </div>
-            <div class="container mt-3">
-              <div class="d-flex justify-content-between">
-                <div class="h-100 pt-1">
-                  <img src="./assets/imgs/main/image-11.jpg" class="rounded-pill" width="40px" alt="" />
-                </div>
-                <div>
-                  <p class="m-0 ps-3">lorem provo con</p>
-                  <p class="m-0 ps-3">lorem un testo</p>
-                  <p class="m-0 ps-3">lorem</p>
-                </div>
-                <div>
-                  <p class="ms-5 text-end badge">4 ore</p>
-                </div>
+        <div class="col-2 bg-warning">
+          <!-- d-none d-md-block-->
+          <div class="container d-flex justify-content-between">
+            <div class="pt-2"><h6>Attività amici</h6></div>
+            <div><i class="bi bi-person-plus px-3 fs-4"></i><i class="bi bi-x-lg fs-4"></i></div>
+          </div>
+          <div class="container mt-3">
+            <div class="d-flex justify-content-between">
+              <div class="h-100 pt-1">
+                <img src="./assets/imgs/main/image-11.jpg" class="rounded-pill" width="40px" alt="" />
               </div>
-            </div>
-            <div class="container mt-3">
-              <div class="d-flex justify-content-between">
-                <div class="h-100 pt-1">
-                  <img src="./assets/imgs/main/image-11.jpg" class="rounded-pill" width="40px" alt="" />
-                </div>
-                <div>
-                  <p class="m-0 ps-3">lorem provo con</p>
-                  <p class="m-0 ps-3">lorem un testo</p>
-                  <p class="m-0 ps-3">lorem</p>
-                </div>
-                <div>
-                  <p class="ms-5 text-end badge">4 ore</p>
-                </div>
+              <div>
+                <p class="m-0 ps-3">lorem provo con</p>
+                <p class="m-0 ps-3">lorem un testo</p>
+                <p class="m-0 ps-3">lorem</p>
               </div>
-            </div>
-            <div class="container mt-3">
-              <div class="d-flex justify-content-between">
-                <div class="h-100 pt-1">
-                  <img src="./assets/imgs/main/image-11.jpg" class="rounded-pill" width="40px" alt="" />
-                </div>
-                <div>
-                  <p class="m-0 ps-3">lorem provo con</p>
-                  <p class="m-0 ps-3">lorem un testo</p>
-                  <p class="m-0 ps-3">lorem</p>
-                </div>
-                <div>
-                  <p class="ms-5 text-end badge">4 ore</p>
-                </div>
+              <div>
+                <p class="ms-5 text-end badge">4 ore</p>
               </div>
             </div>
           </div>
-
-          <!-- --- / sidebar --- -->
-
-
+          <div class="container mt-3">
+            <div class="d-flex justify-content-between">
+              <div class="h-100 pt-1">
+                <img src="./assets/imgs/main/image-11.jpg" class="rounded-pill" width="40px" alt="" />
+              </div>
+              <div>
+                <p class="m-0 ps-3">lorem provo con</p>
+                <p class="m-0 ps-3">lorem un testo</p>
+                <p class="m-0 ps-3">lorem</p>
+              </div>
+              <div>
+                <p class="ms-5 text-end badge">4 ore</p>
+              </div>
+            </div>
+          </div>
+          <div class="container mt-3">
+            <div class="d-flex justify-content-between">
+              <div class="h-100 pt-1">
+                <img src="./assets/imgs/main/image-11.jpg" class="rounded-pill" width="40px" alt="" />
+              </div>
+              <div>
+                <p class="m-0 ps-3">lorem provo con</p>
+                <p class="m-0 ps-3">lorem un testo</p>
+                <p class="m-0 ps-3">lorem</p>
+              </div>
+              <div>
+                <p class="ms-5 text-end badge">4 ore</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- / bottone -->
-
-        
-
-      </div>
-
-      <!-- --- -->
       </div>
     </div>
     <script type="module" src="./js/index.js"></script>
@@ -347,30 +330,5 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const closeButton = document.getElementById("close-right-sidebar");
-        const contentContainer = document.getElementById("right-sidebar");
-        const colRightSidebar = document.getElementById("col-right-sidebar");
-
-        closeButton.addEventListener("click", function () {
-          contentContainer.classList.add("d-none");
-          colRightSidebar.classList.add("col-1");
-          colRightSidebar.classList.remove("col-2");
-          showButton.classList.remove("d-none");
-        });
-
-        const showButton = document.getElementById("btn-right-sidebar");
-        showButton.addEventListener("click", function () {
-          contentContainer.classList.remove("d-none");
-
-          colRightSidebar.classList.remove("col-1");
-          colRightSidebar.classList.add("col-2");
-
-          showButton.classList.add("d-none");
-
-        });
-      });
-    </script>
   </body>
 </html>

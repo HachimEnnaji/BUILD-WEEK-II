@@ -19,89 +19,179 @@
 
     <title>Spotify - Clone</title>
   </head>
-  <body class="bg-dark">
-    <div class="container-fluid">
+  <body class="bg-black ;">
+    <div class="container-fluid" id="main">
       <div class="row">
         <!-- sidebar sx -->
 
-        <div class="col-3 bg-danger">
-          <div class="container-fluid">
-            <div>
-              <i class="bi bi-three-dots"></i>
-              <ul class="list-unstyled">
-                <li class="list-item"><i class="bi bi-house-door-fill text-white text-opacity-50"></i> Home</li>
-                <li class="list-item"><i class="bi bi-search text-white text-opacity-50"></i> Crea</li>
-                <li class="list-item">
-                  <svg
-                    data-encore-id="icon"
-                    role="img"
-                    aria-hidden="true"
-                    viewBox="0 0 24 24"
-                    width="15"
-                    height="20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <!-- Il contenuto del tuo SVG va qui -->
+        <div class="col-3 bg-black g-0 ms-4">
+          <div>
+            <div class="pb-2 border-bottom border-white opacity-75">
+              <div class="mt-3 mb-4">
+                <i class="bi bi-three-dots text-light opacity-75 ms-2 "></i>
+                <ul class="list-unstyled ">
+                  <li class="list-item my-2">
+                    <svg
+                      fill="#b5b5b5"
+                      width="29px"
+                      height="29px"
+                      viewBox="0 0 512 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                      stroke="#b5b5b5"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          fill-rule="evenodd"
+                          d="M192,1.42108547e-14 L384,153.6 L384,384 L213.333333,384 L213.333333,277.333333 L170.666667,277.333333 L170.666667,384 L1.42108547e-14,384 L1.42108547e-14,153.6 L192,1.42108547e-14 Z M192,53.3333333 L42.6666667,170.666667 L42.6666667,341.333333 L128,341.333333 L128,234.666667 L256,234.666667 L256,341.333333 L341.333333,341.333333 L341.333333,170.666667 L192,53.3333333 Z"
+                          transform="translate(64 64)"
+                        ></path>
+                      </g>
+                    </svg>
+                    <span class="ms-3 fw-bolder text-light opacity-75">Home</span>
+                  </li>
+                  <li class="list-item ps-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      fill="gray"
+                      class="bi bi-search"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                      />
+                    </svg>
+                    <span class="ms-3 fw-bolder text-light opacity-75">Crea</span>
+                  </li>
+                  <li class="list-item ps-1 mx-2 my-2">
+                    <svg
+                      data-encore-id="icon"
+                      role="img"
+                      aria-hidden="true"
+                      viewBox="0 0 24 24"
+                      width="20"
+                      height="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <!-- Il contenuto del tuo SVG va qui -->
 
-                    <path
-                      d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"
-                      fill="#EE9AA2"
-                    ></path>
-                  </svg>
-                  La tua libreria
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul class="list-unstyled">
-                <li class="list-item">
-                  <i class="bi bi-plus-square-fill text-white text-opacity-50"></i> Crea playlist
-                </li>
-                <li class="list-item"><i class="bi bi-bag-heart-fill text-opacity-50"></i> Brani che ti piacciono</li>
-                <li class="list-item"><i class="bi bi-bookmark-fill text-opacity-50"></i> I tuoi episodi</li>
-                <hr />
-              </ul>
+                      <path
+                        d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"
+                        fill="#EE9AA2"
+                      ></path>
+                    </svg>
+                    <span class="ms-3 fw-bolder text-light opacity-75 ">La tua libreria</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="mb-4">
+                <ul class="list-unstyled">
+                  <li class="list-item">
+                    <i class="bi bi-plus-square-fill text-white fs-4 ms-2 opacity-75"></i>
+                    <span class="ms-3 fw-bolder text-light opacity-75">Crea playlist</span>
+                  </li>
+                  <li class="list-item">
+                    <i class="bi bi-bag-heart-fill text-light fs-4 ms-2 opacity-75"></i>
+                    <span class="ms-3 fw-bolder text-light opacity-75">Brani che ti piacciono</span>
+                  </li>
+                  <li class="list-item">
+                    <i class="bi bi-bookmark-fill text-light fs-4 ms-2 opacity-75"></i>
+                    <span class="ms-3 fw-bolder text-light opacity-75 ">I tuoi episodi</span>
+                  </li>
+                 
+                </ul>
+              </div>
             </div>
             <div id="dinamicList">
               <!-- seconda sidebar srollabile sotto al menu a sx -->
 
               <ul>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempi</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempi</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempicon qualche cambiamento qua e la</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempicon qualche cambiamento qua e la</li>
+                <li class="my-3">
+                  testi pi\ lunghi per fare migliri esempcon qualche cambiamento qua e laicon qualche cambiamento qua e
+                  la
+                </li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempi</li>
+                <li class="my-3">
+                  testi pi\ lunghi per fare migliri esempcon qualche cambiamento qua e laicon qualche cambiamento qua e
+                  la
+                </li>
+                <li class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing.&#128512</li>
+                <li class="my-3" id="emoji">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor beatae facilis quos.
+                </li>
+                <li class="my-3" id="emoji">Lorem ipsum dolor sit amet. &#128526 &#128525</li>
+                <li class="my-3">Lorem, ipsum dolor.</li>
+                <li class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non!</li>
+                <li class="my-3">Lorem, ipsum.</li>
+                <li class="my-3" id="emoji">Lorem ipsum dolor sit amet consectetur &#128525</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempi</li>
+                <li class="my-3">L'IPhone spacca</li>
+                <li class="my-3" id="emoji">testi pi\ lunghi per fare migliri esempi</li>
+                <li class="my-3" id="emoji">testi pi\ lunghi per fare migliri esempi tutta</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempi</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempi</li>
+                <li class="my-3" id="emoji">testi tanto testo per fare migliri esempi e dirla &#128512</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempi mhhh</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempi troppo</li>
+                <li class="my-3" id="emoji">testi pi\ lunghi per fare migliri esempi &#128512 &#128520</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempicon qualche cambiamento qua e e poila </li>
+                <li class="my-3" id="emoji">testi pi\ lunghi per fare migliri esempi mah &#128512</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempicon qualche cambiamento qua e la</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempi</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempi ed altre parole</li>
+                <li class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                <li class="my-3" id="emoji">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor beatae facilis quos.
+                </li>
+                <li class="my-3" id="emoji">Lorem ipsum dolor sit amet.</li>
+                <li class="my-3">Lorem, ipsum dolor.</li>
+                <li class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non!</li>
+                <li class="my-3">Lorem, ipsum.</li>
+                <li class="my-3" id="emoji">Lorem ipsum dolor sit amet consectetur</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempi</li>
+                <li class="my-3">L'IPhone spacca</li>
+                <li class="my-3" id="emoji">testi pi\ lunghi per fare migliri esempi</li>
+                <li class="my-3" id="emoji">testi pi\ lunghi per fare migliri esempi tutta</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempi</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempi</li>
+                <li class="my-3" id="emoji">testi tanto testo per fare migliri esempi e dirla</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempi mhhh</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempi troppo</li>
+                <li class="my-3" id="emoji">testi pi\ lunghi per fare migliri esempi</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempicon qualche cambiamento qua e e poila</li>
+                <li class="my-3" id="emoji">testi pi\ lunghi per fare migliri esempi mah</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempicon qualche cambiamento qua e la</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempi</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempi ed altre parole</li>
+                <li class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+              
+                <li class="my-3" id="emoji">Lorem ipsum dolor sit amet.</li>
+                <li class="my-3">Lorem, ipsum dolor.</li>
+                <li class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non!</li>
+                <li class="my-3">Lorem, ipsum.</li>
+                <li class="my-3" id="emoji">Lorem ipsum dolor sit amet consectetur</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempi</li>
+                <li class="my-3">L'IPhone spacca</li>
+                <li class="my-3" id="emoji">testi pi\ lunghi per fare migliri esempi</li>
+                <li class="my-3" id="emoji">testi pi\ lunghi per fare migliri esempi tutta</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempi</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempi</li>
+                <li class="my-3" id="emoji">testi tanto testo per fare migliri esempi e dirla</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempi mhhh</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempi troppo</li>
               </ul>
             </div>
           </div>
         </div>
 
-        <!-- sidebar centrale -->
+        <!--  centrale -->
 
         <div class="col g-0" id="backgroundAlbum">
           <div class="container-fluid">
@@ -156,7 +246,7 @@
           </div>
           <div class="gradient-dark text-light">
             <div class="my-3 pt-4">
-              <div class="container col-10">
+              <div class="container col-11 rounded-1">
                 <!--inizio sbottoni player, cuore, download-->
                 <div class="d-flex mb-4">
                   <div>
@@ -164,11 +254,11 @@
                       <i class="bi bi-play-fill fs-3 align-text-top px-2"></i>
                     </button>
                   </div>
-                  <div class="mx-4 d-flex align-items-center">
+                  <div class="mx-4 d-flex align-items-center opacity-75" id="pointer">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="40"
-                      height="40"
+                      width="35"
+                      height="35"
                       fill="currentColor"
                       class="bi bi-heart"
                       viewBox="0 0 16 16"
@@ -178,11 +268,11 @@
                       />
                     </svg>
                   </div>
-                  <div class="d-flex align-items-center">
+                  <div class="d-flex align-items-center opacity-75" id="pointer">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="40"
-                      height="40"
+                      width="35"
+                      height="35"
                       fill="currentColor"
                       class="bi bi-arrow-down-circle"
                       viewBox="0 0 16 16"
@@ -193,7 +283,7 @@
                       />
                     </svg>
                   </div>
-                  <div class="ms-4 d-flex align-items-center">
+                  <div class="ms-4 d-flex align-items-center opacity-75">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="26"
@@ -210,7 +300,7 @@
                 </div>
                 <!--fine bottoni-->
 
-                <div class="d-flex justify-content-between">
+                <div class="d-flex justify-content-between pt-4 border-white border-bottom border-opacity-50 mb-3">
                   <div class="d-flex">
                     <div class="h-100 pt-1">
                       <h6>#</h6>
@@ -227,11 +317,11 @@
                 </div>
               </div>
 
-              <div class="container col-10 pt-4 border-white border-top border-opacity-50">
+              <div class="container col-11 rounded-1" id="selectionTitleAlbumPage">
                 <div class="d-flex justify-content-between">
                   <div class="d-flex">
                     <div class="h-100 pt-1">
-                      <h6 class="mt-2">1</h6>
+                      <h6 class="mt-2 opacity-75">1</h6>
                     </div>
                     <div>
                       <strong class="m-0 ps-3">Giannone Morandi</strong>
@@ -247,11 +337,11 @@
               </div>
             </div>
             <div class="py-3">
-              <div class="container col-10">
+              <div class="container col-11 rounded-1" id="selectionTitleAlbumPage">
                 <div class="d-flex justify-content-between">
                   <div class="d-flex">
                     <div class="h-100 pt-1">
-                      <h6 class="mt-2">1</h6>
+                      <h6 class="mt-2 opacity-75">1</h6>
                     </div>
                     <div>
                       <strong class="m-0 ps-3">Giannone Morandi</strong>
@@ -267,11 +357,11 @@
               </div>
             </div>
             <div class="py-3">
-              <div class="container col-10">
+              <div class="container col-11 rounded-1" id="selectionTitleAlbumPage">
                 <div class="d-flex justify-content-between">
                   <div class="d-flex">
                     <div class="h-100 pt-1">
-                      <h6 class="mt-2">1</h6>
+                      <h6 class="mt-2 opacity-75">1</h6>
                     </div>
                     <div>
                       <strong class="m-0 ps-3">Giannone Morandi</strong>
@@ -287,11 +377,11 @@
               </div>
             </div>
             <div class="py-3">
-              <div class="container col-10">
+              <div class="container col-11 rounded-1" id="selectionTitleAlbumPage">
                 <div class="d-flex justify-content-between">
                   <div class="d-flex">
                     <div class="h-100 pt-1">
-                      <h6 class="mt-2">1</h6>
+                      <h6 class="mt-2 opacity-75">1</h6>
                     </div>
                     <div>
                       <strong class="m-0 ps-3">Giannone Morandi</strong>
@@ -307,11 +397,11 @@
               </div>
             </div>
             <div class="py-3">
-              <div class="container col-10">
+              <div class="container col-11 rounded-1" id="selectionTitleAlbumPage">
                 <div class="d-flex justify-content-between">
                   <div class="d-flex">
                     <div class="h-100 pt-1">
-                      <h6 class="mt-2">1</h6>
+                      <h6 class="mt-2 opacity-75">1</h6>
                     </div>
                     <div>
                       <strong class="m-0 ps-3">Giannone Morandi</strong>
@@ -327,11 +417,11 @@
               </div>
             </div>
             <div class="py-3">
-              <div class="container col-10">
+              <div class="container col-11 rounded-1" id="selectionTitleAlbumPage">
                 <div class="d-flex justify-content-between">
                   <div class="d-flex">
                     <div class="h-100 pt-1">
-                      <h6 class="mt-2">1</h6>
+                      <h6 class="mt-2 opacity-75">1</h6>
                     </div>
                     <div>
                       <strong class="m-0 ps-3">Giannone Morandi</strong>
@@ -347,11 +437,11 @@
               </div>
             </div>
             <div class="py-3">
-              <div class="container col-10">
+              <div class="container col-11 rounded-1" id="selectionTitleAlbumPage">
                 <div class="d-flex justify-content-between">
                   <div class="d-flex">
                     <div class="h-100 pt-1">
-                      <h6 class="mt-2">1</h6>
+                      <h6 class="mt-2 opacity-75">1</h6>
                     </div>
                     <div>
                       <strong class="m-0 ps-3">Giannone Morandi</strong>
@@ -367,11 +457,11 @@
               </div>
             </div>
             <div class="py-3">
-              <div class="container col-10">
+              <div class="container col-11 rounded-1" id="selectionTitleAlbumPage">
                 <div class="d-flex justify-content-between">
                   <div class="d-flex">
                     <div class="h-100 pt-1">
-                      <h6 class="mt-2">1</h6>
+                      <h6 class="mt-2 opacity-75">1</h6>
                     </div>
                     <div>
                       <strong class="m-0 ps-3">Giannone Morandi</strong>
@@ -387,11 +477,11 @@
               </div>
             </div>
             <div class="py-3">
-              <div class="container col-10">
+              <div class="container col-11 rounded-1" id="selectionTitleAlbumPage">
                 <div class="d-flex justify-content-between">
                   <div class="d-flex">
                     <div class="h-100 pt-1">
-                      <h6 class="mt-2">1</h6>
+                      <h6 class="mt-2 opacity-75">1</h6>
                     </div>
                     <div>
                       <strong class="m-0 ps-3">Giannone Morandi</strong>
@@ -407,11 +497,11 @@
               </div>
             </div>
             <div class="py-3">
-              <div class="container col-10">
+              <div class="container col-11 rounded-1" id="selectionTitleAlbumPage">
                 <div class="d-flex justify-content-between">
                   <div class="d-flex">
                     <div class="h-100 pt-1">
-                      <h6 class="mt-2">1</h6>
+                      <h6 class="mt-2 opacity-75">1</h6>
                     </div>
                     <div>
                       <strong class="m-0 ps-3">Giannone Morandi</strong>
@@ -427,11 +517,11 @@
               </div>
             </div>
             <div class="py-3">
-              <div class="container col-10">
+              <div class="container col-11 rounded-1" id="selectionTitleAlbumPage">
                 <div class="d-flex justify-content-between">
                   <div class="d-flex">
                     <div class="h-100 pt-1">
-                      <h6 class="mt-2">1</h6>
+                      <h6 class="mt-2 opacity-75">1</h6>
                     </div>
                     <div>
                       <strong class="m-0 ps-3">Giannone Morandi</strong>
@@ -447,11 +537,11 @@
               </div>
             </div>
             <div class="py-3">
-              <div class="container col-10">
+              <div class="container col-11 rounded-1" id="selectionTitleAlbumPage">
                 <div class="d-flex justify-content-between">
                   <div class="d-flex">
                     <div class="h-100 pt-1">
-                      <h6 class="mt-2">1</h6>
+                      <h6 class="mt-2 opacity-75">1</h6>
                     </div>
                     <div>
                       <strong class="m-0 ps-3">Giannone Morandi</strong>
@@ -467,11 +557,11 @@
               </div>
             </div>
             <div class="py-3">
-              <div class="container col-10">
+              <div class="container col-11 rounded-1" id="selectionTitleAlbumPage">
                 <div class="d-flex justify-content-between">
                   <div class="d-flex">
                     <div class="h-100 pt-1">
-                      <h6 class="mt-2">1</h6>
+                      <h6 class="mt-2 opacity-75">1</h6>
                     </div>
                     <div>
                       <strong class="m-0 ps-3">Giannone Morandi</strong>
@@ -487,11 +577,11 @@
               </div>
             </div>
             <div class="py-3">
-              <div class="container col-10">
+              <div class="container col-11 rounded-1" id="selectionTitleAlbumPage">
                 <div class="d-flex justify-content-between">
                   <div class="d-flex">
                     <div class="h-100 pt-1">
-                      <h6 class="mt-2">1</h6>
+                      <h6 class="mt-2 opacity-75">1</h6>
                     </div>
                     <div>
                       <strong class="m-0 ps-3">Giannone Morandi</strong>
@@ -509,18 +599,19 @@
           </div>
         </div>
 
-        <!-- terza colonna con con attività-->
+        <!-- sidebar dx-->
 
         <!-- bottone -->
         <div class="col-1" id="col-right-sidebar">
-          <button type="button" class="btn btn-primary" id="btn-right-sidebar">Amici</button>
+          <button type="button" class="btn btn-dark" id="btn-right-sidebar">Amici</button>
 
           <!-- --- sidebar --- -->
-          <div class="d-none bg-warning" id="right-sidebar">
+          <div class="d-none bg-black" id="right-sidebar">
             <div class="container d-flex justify-content-between">
-              <div class="pt-2"><h6>Attività amici</h6></div>
+              <div class="pt-2 bolder text-light opacity-75"><h6>Attività amici</h6></div>
               <div>
-                <i class="bi bi-person-plus px-3 fs-4"></i><i class="bi bi-x-lg fs-4" id="close-right-sidebar"></i>
+                <i class="bi bi-person-plus px-3 fs-4 text-light opacity-75"></i
+                ><i class="bi bi-x-lg text-light opacity-75 fs-4" id="close-right-sidebar"></i>
               </div>
             </div>
             <div class="container mt-3">
@@ -528,10 +619,10 @@
                 <div class="h-100 pt-1">
                   <img src="./assets/imgs/main/image-11.jpg" class="rounded-pill" width="40px" alt="" />
                 </div>
-                <div>
-                  <p class="m-0 ps-3">lorem provo con</p>
-                  <p class="m-0 ps-3">lorem un testo</p>
-                  <p class="m-0 ps-3">lorem</p>
+                <div class="bolder text-light ">
+                  <h6 class="m-0 ps-3">lorem provo con</h6>
+                  <p class="m-0 ps-3 opacity-75">Mattia Consorzio</p>
+                  <p class="m-0 ps-3 opacity-75">lorem</p>
                 </div>
                 <div>
                   <p class="ms-5 text-end badge">4 ore</p>
@@ -543,10 +634,10 @@
                 <div class="h-100 pt-1">
                   <img src="./assets/imgs/main/image-11.jpg" class="rounded-pill" width="40px" alt="" />
                 </div>
-                <div>
-                  <p class="m-0 ps-3">lorem provo con</p>
-                  <p class="m-0 ps-3">lorem un testo</p>
-                  <p class="m-0 ps-3">lorem</p>
+                <div class="bolder text-light ">
+                  <h6 class="m-0 ps-3">lorem provo con</h6>
+                  <p class="m-0 ps-3 opacity-75">Federico Dedalo</p>
+                  <p class="m-0 ps-3 opacity-75 ">lorem</p>
                 </div>
                 <div>
                   <p class="ms-5 text-end badge">4 ore</p>
@@ -558,10 +649,10 @@
                 <div class="h-100 pt-1">
                   <img src="./assets/imgs/main/image-11.jpg" class="rounded-pill" width="40px" alt="" />
                 </div>
-                <div>
-                  <p class="m-0 ps-3">lorem provo con</p>
-                  <p class="m-0 ps-3">lorem un testo</p>
-                  <p class="m-0 ps-3">lorem</p>
+                <div class="bolder text-light ">
+                  <h6 class="m-0 ps-3">lorem provo con</h6>
+                  <p class="m-0 ps-3 opacity-75">Elio Tognazzi</p>
+                  <p class="m-0 ps-3 opacity-75">lorem</p>
                 </div>
                 <div>
                   <p class="ms-5 text-end badge">4 ore</p>

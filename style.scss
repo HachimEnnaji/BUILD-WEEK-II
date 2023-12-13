@@ -6,9 +6,15 @@ body {
   font-family: "Circular";
   font-weight: $n3;
 }
+
 #dinamicList {
-  height: 50vh;
+  height: 69vh;
   overflow: auto;
+  ul {
+    list-style-type: none;
+    font-weight: 400;
+    color: rgb(116, 116, 116);
+  }
 }
 #left-sidebar,
 #right-sidebar {
@@ -20,12 +26,27 @@ body {
 }
 #backgroundAlbum {
   background: rgb(255, 204, 35);
-  background: linear-gradient(180deg, rgba(255, 204, 35, 1) 4%, rgba(41, 40, 40, 1) 30%);
+  background: linear-gradient(180deg, rgba(255, 204, 35, 1) 4%, rgba(41, 40, 40, 1) 60%);
+  height: 100vh;
+  overflow: scroll;
+}
+::-webkit-scrollbar {
+  width: 15px;
 }
 
-#stickyelement {
-  position: sticky;
-  top: 20px;
+/* Track */
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 148, 148, 0.637);
+}
+#selectionTitleAlbumPage:hover {
+  background-color: rgb(63, 63, 63);
+  cursor: pointer;
+}
+li span,
+#pointer svg:hover {
+  cursor: pointer;
 }
 ::-webkit-scrollbar {
   width: 10px;

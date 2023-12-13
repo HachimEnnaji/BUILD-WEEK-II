@@ -30,11 +30,6 @@ body {
   overflow: scroll;
 }
 
-#mainScrollbar {
-  height: 100vh;
-  overflow: scroll;
-}
-
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -57,7 +52,7 @@ li span,
 
 #backgroundIndexArtist {
   background: rgb(41, 40, 40);
-  background: linear-gradient(180deg, rgb(41, 40, 40) 0%, rgb(0, 0, 0) 56%);
+  background: linear-gradient(180deg, rgb(41, 40, 40) 0%, rgb(0, 0, 0) 76%);
   height: 100vh;
   overflow: scroll;
-}
+}/*# sourceMappingURL=style.css.map */

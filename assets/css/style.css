@@ -30,6 +30,11 @@ body {
   overflow: scroll;
 }
 
+#mainScrollbar {
+  height: 100vh;
+  overflow: scroll;
+}
+
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -48,4 +53,11 @@ body {
 li span,
 #pointer svg:hover {
   cursor: pointer;
+}
+
+#backgroundIndexArtist {
+  background: rgb(41, 40, 40);
+  background: linear-gradient(180deg, rgb(41, 40, 40) 0%, rgb(0, 0, 0) 56%);
+  height: 100vh;
+  overflow: scroll;
 }

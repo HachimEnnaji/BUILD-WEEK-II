@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-{"version":3,"sourceRoot":"","sources":["../../../style.scss"],"names":[],"mappings":"AAIA,KACE,uBACA,YAJG,IAML,aACE,YACA,cAEF,6BAEE,sBAEF,eACE,gBACA,6GAEF,iBACE,mBACA,8EAGF,eACE,gBACA,SAEF,oBACE,WAGF,0BACE,yBAGF,0BACE,mBAEF,gCACE","file":"style.min.css"}
-=======
-{"version":3,"sources":["../../../style.scss"],"names":[],"mappings":"AAIA,KACE,sBAAA,CACA,eAJG,CAOL,aACE,WAAA,CACA,aAAA,CACA,gBACE,oBAAA,CACA,eAAA,CACA,aAAA,CAIJ,eACE,eAAA,CACA,4GAAA,CAEF,iBACE,kBAAA,CACA,6EAAA,CACA,YAAA,CACA,eAAA,CAEF,oBACE,UAAA,CAMF,0BACE,iCAAA,CAEF,+BACE,wBAAA,CACA,cAAA,CAEF,2BAEE,cAAA","file":"style.min.css"}
->>>>>>> e9cd39157bec0b8caa6135cccb67d2796c5c27cd
+{"version":3,"sources":["../../../style.scss"],"names":[],"mappings":"AAIA,KACE,sBAAA,CACA,eAJG,CAOL,aACE,WAAA,CACA,aAAA,CACA,gBACE,oBAAA,CACA,eAAA,CACA,aAAA,CAGJ,6BAEE,qBAAA,CAEF,eACE,eAAA,CACA,4GAAA,CAEF,iBACE,kBAAA,CACA,6EAAA,CACA,YAAA,CACA,eAAA,CAGF,eACE,YAAA,CACA,eAAA,CAGF,oBACE,UAAA,CAMF,0BACE,iCAAA,CAEF,+BACE,wBAAA,CACA,cAAA,CAEF,2BAEE,cAAA,CAGF,uBACE,kBAAA,CACA,wEAAA,CACA,YAAA,CACA,eAAA","file":"style.min.css"}

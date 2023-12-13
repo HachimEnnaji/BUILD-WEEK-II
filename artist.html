@@ -28,8 +28,8 @@
           <div>
             <div class="pb-2 border-bottom border-white opacity-75">
               <div class="mt-3 mb-4">
-                <i class="bi bi-three-dots text-light opacity-75 ms-2 "></i>
-                <ul class="list-unstyled ">
+                <i class="bi bi-three-dots text-light opacity-75 ms-2"></i>
+                <ul class="list-unstyled">
                   <li class="list-item my-2">
                     <svg
                       fill="#b5b5b5"
@@ -83,7 +83,7 @@
                         fill="#EE9AA2"
                       ></path>
                     </svg>
-                    <span class="ms-3 fw-bolder text-light opacity-75 ">La tua libreria</span>
+                    <span class="ms-3 fw-bolder text-light opacity-75">La tua libreria</span>
                   </li>
                 </ul>
               </div>
@@ -99,9 +99,8 @@
                   </li>
                   <li class="list-item">
                     <i class="bi bi-bookmark-fill text-light fs-4 ms-2 opacity-75"></i>
-                    <span class="ms-3 fw-bolder text-light opacity-75 ">I tuoi episodi</span>
+                    <span class="ms-3 fw-bolder text-light opacity-75">I tuoi episodi</span>
                   </li>
-                 
                 </ul>
               </div>
             </div>
@@ -122,27 +121,27 @@
                   testi pi\ lunghi per fare migliri esempcon qualche cambiamento qua e laicon qualche cambiamento qua e
                   la
                 </li>
-                <li class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing.&#128512</li>
+                <li class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing.&#128512;</li>
                 <li class="my-3" id="emoji">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor beatae facilis quos.
                 </li>
-                <li class="my-3" id="emoji">Lorem ipsum dolor sit amet. &#128526 &#128525</li>
+                <li class="my-3" id="emoji">Lorem ipsum dolor sit amet. &#128526; &#128525;</li>
                 <li class="my-3">Lorem, ipsum dolor.</li>
                 <li class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non!</li>
                 <li class="my-3">Lorem, ipsum.</li>
-                <li class="my-3" id="emoji">Lorem ipsum dolor sit amet consectetur &#128525</li>
+                <li class="my-3" id="emoji">Lorem ipsum dolor sit amet consectetur &#128525;</li>
                 <li class="my-3">testi pi\ lunghi per fare migliri esempi</li>
                 <li class="my-3">L'IPhone spacca</li>
                 <li class="my-3" id="emoji">testi pi\ lunghi per fare migliri esempi</li>
                 <li class="my-3" id="emoji">testi pi\ lunghi per fare migliri esempi tutta</li>
                 <li class="my-3">testi pi\ lunghi per fare migliri esempi</li>
                 <li class="my-3">testi pi\ lunghi per fare migliri esempi</li>
-                <li class="my-3" id="emoji">testi tanto testo per fare migliri esempi e dirla &#128512</li>
+                <li class="my-3" id="emoji">testi tanto testo per fare migliri esempi e dirla &#128512;</li>
                 <li class="my-3">testi pi\ lunghi per fare migliri esempi mhhh</li>
                 <li class="my-3">testi pi\ lunghi per fare migliri esempi troppo</li>
-                <li class="my-3" id="emoji">testi pi\ lunghi per fare migliri esempi &#128512 &#128520</li>
-                <li class="my-3">testi pi\ lunghi per fare migliri esempicon qualche cambiamento qua e e poila </li>
-                <li class="my-3" id="emoji">testi pi\ lunghi per fare migliri esempi mah &#128512</li>
+                <li class="my-3" id="emoji">testi pi\ lunghi per fare migliri esempi &#128512; &#128520;</li>
+                <li class="my-3">testi pi\ lunghi per fare migliri esempicon qualche cambiamento qua e e poila</li>
+                <li class="my-3" id="emoji">testi pi\ lunghi per fare migliri esempi mah &#128512;</li>
                 <li class="my-3">testi pi\ lunghi per fare migliri esempicon qualche cambiamento qua e la</li>
                 <li class="my-3">testi pi\ lunghi per fare migliri esempi</li>
                 <li class="my-3">testi pi\ lunghi per fare migliri esempi ed altre parole</li>
@@ -171,7 +170,7 @@
                 <li class="my-3">testi pi\ lunghi per fare migliri esempi</li>
                 <li class="my-3">testi pi\ lunghi per fare migliri esempi ed altre parole</li>
                 <li class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-              
+
                 <li class="my-3" id="emoji">Lorem ipsum dolor sit amet.</li>
                 <li class="my-3">Lorem, ipsum dolor.</li>
                 <li class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non!</li>
@@ -194,14 +193,7 @@
         <!-- sidebar centrale -->
 
         <div class="col" id="backgroundIndexArtist" id="mainScrollbar">
-          <div
-            class=" text-white h-50"
-            style="
-              background: linear-gradient(to bottom, #00000000 30%, #000000ff),
-                url('./assets/imgs/back-view-crowd-fans-live-perf.jpg');
-              background-position: center;
-            "
-          >
+          <div class="text-white h-50" id="background">
             <!-- arrows -->
             <div class="container-fluid d-flex justify-content-between">
               <div class="container-fluid my-2">
@@ -222,8 +214,12 @@
               <span class="badge text-start fw-normal m-0 px-0 py-2"
                 ><i class="bi bi-check-lg bg-primary rounded-circle p-1 me-2"></i>Artista verificato</span
               >
-              <h2 class="display-3 fw-bold">Yellowcard</h2>
-              <p class="badge text-start fw-normal p-0">3.433.158 ascoltatori mensili</p>
+              <h2 class="display-3 fw-bold" id="artist">
+                <!-- <p class="placeholder-wave">
+                  <span class="placeholder col-3"></span>
+                </p> -->
+              </h2>
+              <p class="badge text-start fw-normal p-0"><span id="rank">3.433.158 </span> ascoltatori mensili</p>
             </div>
             <!-- / hero -->
             <!-- play -->
@@ -345,7 +341,7 @@
                 <div class="h-100 pt-1">
                   <img src="./assets/imgs/main/image-11.jpg" class="rounded-pill" width="40px" alt="" />
                 </div>
-                <div class="bolder text-light ">
+                <div class="bolder text-light">
                   <h6 class="m-0 ps-3">lorem provo con</h6>
                   <p class="m-0 ps-3 opacity-75">Mattia Consorzio</p>
                   <p class="m-0 ps-3 opacity-75">lorem</p>
@@ -360,10 +356,10 @@
                 <div class="h-100 pt-1">
                   <img src="./assets/imgs/main/image-11.jpg" class="rounded-pill" width="40px" alt="" />
                 </div>
-                <div class="bolder text-light ">
+                <div class="bolder text-light">
                   <h6 class="m-0 ps-3">lorem provo con</h6>
                   <p class="m-0 ps-3 opacity-75">Federico Dedalo</p>
-                  <p class="m-0 ps-3 opacity-75 ">lorem</p>
+                  <p class="m-0 ps-3 opacity-75">lorem</p>
                 </div>
                 <div>
                   <p class="ms-5 text-end badge">4 ore</p>
@@ -375,7 +371,7 @@
                 <div class="h-100 pt-1">
                   <img src="./assets/imgs/main/image-11.jpg" class="rounded-pill" width="40px" alt="" />
                 </div>
-                <div class="bolder text-light ">
+                <div class="bolder text-light">
                   <h6 class="m-0 ps-3">lorem provo con</h6>
                   <p class="m-0 ps-3 opacity-75">Elio Tognazzi</p>
                   <p class="m-0 ps-3 opacity-75">lorem</p>
@@ -395,8 +391,9 @@
       <!-- --- -->
     </div>
     <!-- player bar -->
-    <div class="container-fluid bg-dark text-white position-fixed bottom-0 border-top border-white border-opacity-10 border-1 py-3">
-
+    <div
+      class="container-fluid bg-dark text-white position-fixed bottom-0 border-top border-white border-opacity-10 border-1 py-3"
+    >
       <div class="row align-items-center">
         <!-- sx: -->
         <div class="col-3">
@@ -404,11 +401,11 @@
           <div class="d-flex align-items-center">
             <!-- divisione: -->
             <div>
-              <img src="./assets/imgs/main/image-1.jpg" width="60px" alt="cover">
+              <img src="./assets/imgs/main/image-1.jpg" width="60px" alt="cover" />
             </div>
             <div class="d-flex flex-column align-items-start pe-4">
               <span class="badge">Titolo della canzone</span>
-              <span class="badge fw-light text-white-50">Nome artista</span>              
+              <span class="badge fw-light text-white-50">Nome artista</span>
             </div>
             <div>
               <i class="bi bi-heart text-white-50"></i>
@@ -433,12 +430,19 @@
               <i class="bi bi-repeat text-success fs-5 mx-2 position-relative">
                 <i class="bi bi-dot position-absolute top-50 start-0"></i>
               </i>
-              
             </div>
             <div class="d-flex justify-content-center align-items-center">
               <span class="badge fw-light text-white-50">0:58</span>
-              <div class="progress bg-white bg-opacity-25 w-75 mx-1" style="height: 4px;">
-                <div class="progress-bar bg-white w-25" style="height: 4px;" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress bg-white bg-opacity-25 w-75 mx-1" style="height: 4px">
+                <div
+                  class="progress-bar bg-white w-25"
+                  style="height: 4px"
+                  role="progressbar"
+                  aria-label="Basic example"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
               </div>
               <span class="badge fw-light text-white-50">3:20</span>
             </div>
@@ -451,21 +455,53 @@
         <div class="col-3">
           <!-- contenuto 3 col: -->
           <div class="d-flex justify-content-end align-items-center">
-            <svg class="mx-2" fill="#ffffff80" height="16px" width="16px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" viewBox="0 0 512.018 512.018" xml:space="preserve"><path d="M478.723,33.289c-44.359-44.385-116.323-44.385-160.709,0c-24.734,24.758-36.272,58.916-32.52,92.842L5.677,428.734    c-7.779,8.412-7.524,21.467,0.578,29.569l47.467,47.467c8.102,8.102,21.156,8.357,29.569,0.578l302.611-279.824    c33.934,3.763,68.07-7.775,92.821-32.526C523.107,149.613,523.107,77.673,478.723,33.289z M69.385,461.093l-18.454-18.454    l259.181-280.287l19.787,19.787l19.773,19.773L69.385,461.093z M448.553,163.828c-15.02,15.02-35.523,22.237-56.155,20.47    l-64.678-64.678c-1.752-20.629,5.47-41.151,20.472-56.168c27.714-27.714,72.656-27.714,100.357,0.003    C476.275,91.181,476.275,136.105,448.553,163.828z"/></svg>
-            <svg class="mx-2" fill="#ffffff80" width="17px" height="17px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22,4H2A1,1,0,0,0,1,5v6a1,1,0,0,0,1,1H22a1,1,0,0,0,1-1V5A1,1,0,0,0,22,4Zm-1,6H3V6H21Zm2,5a1,1,0,0,1-1,1H2a1,1,0,0,1,0-2H22A1,1,0,0,1,23,15Zm0,4a1,1,0,0,1-1,1H2a1,1,0,0,1,0-2H22A1,1,0,0,1,23,19Z"/></svg>
+            <svg
+              class="mx-2"
+              fill="#ffffff80"
+              height="16px"
+              width="16px"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              version="1.1"
+              id="Layer_1"
+              viewBox="0 0 512.018 512.018"
+              xml:space="preserve"
+            >
+              <path
+                d="M478.723,33.289c-44.359-44.385-116.323-44.385-160.709,0c-24.734,24.758-36.272,58.916-32.52,92.842L5.677,428.734    c-7.779,8.412-7.524,21.467,0.578,29.569l47.467,47.467c8.102,8.102,21.156,8.357,29.569,0.578l302.611-279.824    c33.934,3.763,68.07-7.775,92.821-32.526C523.107,149.613,523.107,77.673,478.723,33.289z M69.385,461.093l-18.454-18.454    l259.181-280.287l19.787,19.787l19.773,19.773L69.385,461.093z M448.553,163.828c-15.02,15.02-35.523,22.237-56.155,20.47    l-64.678-64.678c-1.752-20.629,5.47-41.151,20.472-56.168c27.714-27.714,72.656-27.714,100.357,0.003    C476.275,91.181,476.275,136.105,448.553,163.828z"
+              />
+            </svg>
+            <svg
+              class="mx-2"
+              fill="#ffffff80"
+              width="17px"
+              height="17px"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M22,4H2A1,1,0,0,0,1,5v6a1,1,0,0,0,1,1H22a1,1,0,0,0,1-1V5A1,1,0,0,0,22,4Zm-1,6H3V6H21Zm2,5a1,1,0,0,1-1,1H2a1,1,0,0,1,0-2H22A1,1,0,0,1,23,15Zm0,4a1,1,0,0,1-1,1H2a1,1,0,0,1,0-2H22A1,1,0,0,1,23,19Z"
+              />
+            </svg>
             <i class="bi bi-speaker text-white-50 mx-2"></i>
-            <i class="bi bi-volume-down text-white-50 fs-4 "></i>
-            <div class="progress bg-white bg-opacity-25 w-25 me-3" style="height: 4px;">
-              <div class="progress-bar bg-white w-50" style="height: 4px;" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            <i class="bi bi-volume-down text-white-50 fs-4"></i>
+            <div class="progress bg-white bg-opacity-25 w-25 me-3" style="height: 4px">
+              <div
+                class="progress-bar bg-white w-50"
+                style="height: 4px"
+                role="progressbar"
+                aria-label="Basic example"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
             </div>
             <i class="bi bi-arrows-angle-expand text-white-50"></i>
           </div>
           <!-- / contenuto 3 col: -->
         </div>
         <!-- / dx -->
-
       </div>
-
     </div>
 
     <script type="module" src="./js/artist.js"></script>

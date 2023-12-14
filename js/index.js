@@ -80,7 +80,7 @@ fetch(UrlArtist, options)
     const artist = document.getElementById("albumArtist");
     const textArtist = document.getElementById("textArtist");
     const linkArtistImg = document.getElementById("linkArtistImg");
-    linkArtistImg.innerHTML = `<a  class="text-decoration-none" href="./artist.html?q=${params}"><img src="${selection.album.cover_big}" alt="album foto" height="200px" id="albumImg" /></a>`;
+    linkArtistImg.innerHTML = `<a  class="text-decoration-none" href="./artist.html?q=${params}"><img src="${selection.album.cover_big}" alt="album foto" id="albumImg" /></a>`;
     title.innerHTML = `<a  class="text-decoration-none text-white display-4 fw-bold" href="./artist.html?q=${params}">${selection.album.title}</a>`;
     artist.innerHTML = `<a class="text-decoration-none text-white"  href="./artist.html?q=${params}">${selection.artist.name}</a>`;
     textArtist.innerHTML = `<a class="text-decoration-none text-white"  href="./artist.html?q=${params}">${selection.artist.name}</a>`;

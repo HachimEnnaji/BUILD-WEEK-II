@@ -38,6 +38,11 @@ body {
 #right-sidebar {
   background-color: #000000;
 }
+
+#albumImg {
+  max-width: 100%;
+}
+
 .gradient-dark {
   background: rgb(0, 0, 0);
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.3085609243697479) 0%, rgb(29, 29, 29) 33%, rgb(20, 20, 20) 72%);

@@ -72,9 +72,13 @@ li span,
 }
 
 #backgroundIndexArtist {
-  background: rgb(41, 40, 40);
+  background: #292828;
   height: 100vh;
   overflow: scroll;
+}
+
+.bg-gray {
+  background-color: #292828;
 }
 
 .bg-spotify {

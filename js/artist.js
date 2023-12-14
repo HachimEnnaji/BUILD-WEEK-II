@@ -20,7 +20,8 @@ fetch(URL + search + paramsid, options)
     const artistContainer = document.getElementById("artist");
     let rank = document.getElementById("rank");
     const background = document.getElementById("background");
-    background.style.backgroundImage = `URL(${artist.artist.picture_xl})`;
+    // background.style.backgroundImage = `URL(${artist.artist.picture_xl})`;
+    background.style.background = `linear-gradient(to bottom, #00000000 30%, #000000ff), url(${artist.artist.picture_xl})`;
 
     background.style.objectFit = "contain";
     background.style.backgroundPositionY = "20%";

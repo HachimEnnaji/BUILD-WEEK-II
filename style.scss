@@ -16,6 +16,24 @@ body {
     color: rgb(116, 116, 116);
   }
 }
+
+#left-bar-fav {
+  .list-item {
+    i {
+      font-size: 0.7rem;
+      &.bi-plus-lg {
+        background-color: #fff;
+      }
+      &.bi-heart-fill {
+        background: linear-gradient(127deg, #4414bd 0%, #c3ecff 100%);
+      }
+      &.bi-bookmark-fill {
+        color: #1ed760;
+      }
+    }
+  }
+}
+
 #left-sidebar,
 #right-sidebar {
   background-color: #000000;
@@ -32,7 +50,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 12px;
 }
 
 /* Track */
@@ -50,12 +68,24 @@ li span,
   cursor: pointer;
 }
 
+.hero-gradient {
+  background: linear-gradient(190deg, #ffffff00 0%, #ffffff0a 40%, #000000 70%);
+}
+
 #backgroundIndexArtist {
   background: rgb(41, 40, 40);
-  background: linear-gradient(180deg, rgba(41, 40, 40, 1) 0%, rgba(0, 0, 0, 1) 76%);
   height: 100vh;
   overflow: scroll;
 }
 // #background {
 //   background-position: center;
 // }
+
+.bg-spotify {
+  background-color: #1ed760;
+}
+
+.heart-badge {
+  top: 45px;
+  left: 45px;
+}

@@ -24,49 +24,21 @@
       <div class="row">
         <!-- sidebar sx -->
 
-        <div class="col-3 bg-black g-0 ms-4">
+        <div class="col-2 bg-black g-0 ms-4">
           <div>
-            <div class="pb-2 border-bottom border-white opacity-75">
-              <div class="mt-3 mb-4">
-                <i class="bi bi-three-dots text-light opacity-75 ms-2"></i>
+            <div class="border-bottom border-white border-opacity-25 opacity-75">
+              <div class="mt-2 mb-4">
+                <i class="bi bi-three-dots text-light fs-4"></i>
                 <ul class="list-unstyled">
                   <li class="list-item my-2">
-                    <svg
-                      fill="#b5b5b5"
-                      width="29px"
-                      height="29px"
-                      viewBox="0 0 512 512"
-                      xmlns="http://www.w3.org/2000/svg"
-                      stroke="#b5b5b5"
-                    >
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                      <g id="SVGRepo_iconCarrier">
-                        <path
-                          fill-rule="evenodd"
-                          d="M192,1.42108547e-14 L384,153.6 L384,384 L213.333333,384 L213.333333,277.333333 L170.666667,277.333333 L170.666667,384 L1.42108547e-14,384 L1.42108547e-14,153.6 L192,1.42108547e-14 Z M192,53.3333333 L42.6666667,170.666667 L42.6666667,341.333333 L128,341.333333 L128,234.666667 L256,234.666667 L256,341.333333 L341.333333,341.333333 L341.333333,170.666667 L192,53.3333333 Z"
-                          transform="translate(64 64)"
-                        ></path>
-                      </g>
-                    </svg>
-                    <span class="ms-3 fw-bolder text-light opacity-75">Home</span>
+                    <i class="bi bi-house-door-fill text-white text-opacity-75 fs-4"></i>
+                    <span class="badge fw-bold text-light opacity-75 my-1 ms-2">Home</span>
                   </li>
                   <li class="list-item ps-1">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="25"
-                      height="25"
-                      fill="gray"
-                      class="bi bi-search"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
-                      />
-                    </svg>
-                    <span class="ms-3 fw-bolder text-light opacity-75">Crea</span>
+                    <i class="bi bi-search text-white text-opacity-75 fs-5"></i>
+                    <span class="badge fw-bold text-light opacity-75 my-1 ms-2">Cerca</span>
                   </li>
-                  <li class="list-item ps-1 mx-2 my-2">
+                  <li class="list-item ps-1 my-2">
                     <svg
                       data-encore-id="icon"
                       role="img"
@@ -80,26 +52,26 @@
 
                       <path
                         d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"
-                        fill="#EE9AA2"
+                        fill="#ffffffbf"
                       ></path>
                     </svg>
-                    <span class="ms-3 fw-bolder text-light opacity-75">La tua libreria</span>
+                    <span class="badge fw-bold text-light opacity-75 my-1 ms-2">La tua libreria</span>
                   </li>
                 </ul>
               </div>
               <div class="mb-4">
-                <ul class="list-unstyled">
+                <ul class="list-unstyled" id="left-bar-fav">
                   <li class="list-item">
-                    <i class="bi bi-plus-square-fill text-white fs-4 ms-2 opacity-75"></i>
-                    <span class="ms-3 fw-bolder text-light opacity-75">Crea playlist</span>
+                    <i class="bi bi-plus-lg text-black ms-1 px-2 py-1 rounded-1"></i>
+                    <span class="badge fw-bold text-light opacity-75 mb-2">Crea playlist</span>
                   </li>
                   <li class="list-item">
-                    <i class="bi bi-bag-heart-fill text-light fs-4 ms-2 opacity-75"></i>
-                    <span class="ms-3 fw-bolder text-light opacity-75">Brani che ti piacciono</span>
+                    <i class="bi bi-heart-fill text-light ms-1 px-2 py-1 rounded-1"></i>
+                    <span class="badge fw-bold text-light opacity-75 my-2">Brani che ti piacciono</span>
                   </li>
                   <li class="list-item">
-                    <i class="bi bi-bookmark-fill text-light fs-4 ms-2 opacity-75"></i>
-                    <span class="ms-3 fw-bolder text-light opacity-75">I tuoi episodi</span>
+                    <i class="bi bi-bookmark-fill bg-success bg-opacity-75 ms-1 px-2 py-1 rounded-1"></i>
+                    <span class="badge fw-bold text-light opacity-75 mt-2">I tuoi episodi</span>
                   </li>
                 </ul>
               </div>
@@ -225,11 +197,13 @@
             <!-- play -->
 
             <div class="d-flex align-items-center">
-              <button class="rounded-circle border-0 bg-success p-0">
-                <i class="bi bi-play-fill fs-3 align-text-top px-2"></i>
+              <button class="rounded-circle border-0 bg-spotify px-1">
+                <i class="bi bi-play-fill fs-2 align-text-top px-2"></i>
               </button>
-              <span class="badge text-bg-dark border border-2 text-uppercase mx-3">Following</span>
-              <i class="bi bi-three-dots"></i>
+              <span class="badge text-bg-dark bg-transparent border border-1 text-uppercase py-2 px-3 mx-4"
+                >Following</span
+              >
+              <i class="bi bi-three-dots fs-4"></i>
             </div>
             <!-- / play -->
             <!-- liste -->
@@ -300,12 +274,9 @@
                 <div class="row mt-3 align-items-center">
                   <div class="col-2">
                     <div class="position-relative">
-                      <img class="rounded-circle" height="50px" src="./assets/imgs/main/image-1.jpg" alt="song cover" />
-                      <span
-                        class="position-absolute bg-success border border-light rounded-circle"
-                        style="left: 30px; top: 30px"
-                      >
-                        <span class="badge p-1"><i class="bi bi-heart-fill"></i></span>
+                      <img class="rounded-circle" height="70px" src="./assets/imgs/main/image-1.jpg" alt="song cover" />
+                      <span class="position-absolute heart-badge bg-spotify rounded-circle">
+                        <span class="badge"><i class="bi bi-suit-heart-fill small"></i></span>
                       </span>
                     </div>
                   </div>

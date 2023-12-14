@@ -13,6 +13,19 @@ body {
   color: rgb(116, 116, 116);
 }
 
+#left-bar-fav .list-item i {
+  font-size: 0.7rem;
+}
+#left-bar-fav .list-item i.bi-plus-lg {
+  background-color: #fff;
+}
+#left-bar-fav .list-item i.bi-heart-fill {
+  background: linear-gradient(127deg, #4414bd 0%, #c3ecff 100%);
+}
+#left-bar-fav .list-item i.bi-bookmark-fill {
+  color: #1ed760;
+}
+
 #left-sidebar,
 #right-sidebar {
   background-color: #000000;
@@ -31,7 +44,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 12px;
 }
 
 /* Track */
@@ -50,9 +63,21 @@ li span,
   cursor: pointer;
 }
 
+.hero-gradient {
+  background: linear-gradient(190deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.0392156863) 40%, #000000 70%);
+}
+
 #backgroundIndexArtist {
   background: rgb(41, 40, 40);
-  background: linear-gradient(180deg, rgb(41, 40, 40) 0%, rgb(0, 0, 0) 76%);
   height: 100vh;
   overflow: scroll;
+}
+
+.bg-spotify {
+  background-color: #1ed760;
+}
+
+.heart-badge {
+  top: 45px;
+  left: 45px;
 }/*# sourceMappingURL=style.css.map */

@@ -3,46 +3,45 @@ import { URL, token, options, search, playlist } from "./token.js";
 const arrArtist = [
   "Eminem",
   "Rihanna",
-  "The-Beatles",
-  "Taylor-Swift",
-  "Imagine-Dragons",
-  "Linkin-Park",
+  "The Beatles",
+  "Taylor Swift",
+  "Imagine Dragons",
+  "Linkin Park",
   "Oasis",
   "Drake",
-  "Katy-Perry",
-  "Laura-Pausini",
-  "Eros-Ramazzotti",
+  "Katy Perry",
+  "Laura Pausini",
+  "Eros Ramazzotti",
   "Zucchero",
-  "Ariana-Grande",
-  "Alicia-Keys",
+  "Ariana Grande",
+  "Alicia Keys",
   "Beyonce",
-  "Jay-Z",
-  "50-Cent",
-  "Lana-Del-Rey",
-  "The-Weeknd",
-  "Laday-Gaga",
-  "Ed-Sheeran",
-  "Harry-Styles",
-  "Bruno-Mars",
-  "Miley-Cirus",
-  "Charlie-Puth",
-  "Selena-Gomez",
+  "Jay Z",
+  "50 Cent",
+  "Lana Del Rey",
+  "The Weeknd",
+  "Laday Gaga",
+  "Ed Sheeran",
+  "Harry Styles",
+  "Bruno Mars",
+  "Miley Cirus",
+  "Charlie Puth",
+  "Selena Gomez",
   "Shakira",
   "Pink",
-  "John-Legend",
-  "Adam-Levine",
+  "John Legend",
+  "Adam Levine",
   "Future",
-  "Billie-Eilish",
+  "Billie Eilish",
   "Adele",
-  "Justin-Bieber",
-  "Dua-Lipa",
-  "Shawn-Mendes",
+  "Justin Bieber",
+  "Dua Lipa",
+  "Shawn Mendes",
 ];
 const arrayAlbumID = [
   69874, 35475, 98745, 1596, 18475, 19587, 57250, 25874, 58746, 5874, 487659, 58746, 65874, 8452, 9587, 8540, 7677,
   2587,
 ];
-
 // funzione per mandare saluto in base all'orario
 
 const greetings = () => {
@@ -64,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeButton = document.getElementById("close-right-sidebar");
   const contentContainer = document.getElementById("right-sidebar");
   const colRightSidebar = document.getElementById("col-right-sidebar");
-
   closeButton.addEventListener("click", function () {
     contentContainer.classList.add("d-none");
     colRightSidebar.classList.add("col-1");
@@ -82,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
     showButton.classList.add("d-none");
   });
 });
+
 // funzione che randomizza indice in base alla lunghezza dell'array che riceve come parametro
 const indexRandom = (array) => {
   const index = Math.floor(Math.random() * array.length);
@@ -106,6 +105,17 @@ fetch(UrlArtist, options)
     const artist = document.getElementById("albumArtist");
     const textArtist = document.getElementById("textArtist");
     const linkArtistImg = document.getElementById("linkArtistImg");
+    const playButton = document.getElementById("playButton");
+    console.log(playButton);
+    playButton.addEventListener("click", function () {
+      const playerBarImg = document.getElementById("playeBarImg");
+      console.log(selection.album.cover_big);
+      const titleAlbum = document.getElementById("titleAlbum");
+      const nameArtist = document.getElementById("nameArtist");
+      playerBarImg.setAttribute("src", selection.album.cover_big);
+      titleAlbum.innerHTML = selection.album.title;
+      nameArtist.innerHTML = selection.artist.name;
+    });
     linkArtistImg.innerHTML = `<a  class="text-decoration-none" href="./album.html?id=${selection.album.id}"><img src="${selection.album.cover_big}" alt="album foto" id="albumImg" /></a>`;
     // console.log(selection.album.id);
     title.innerHTML = `<a  class="text-decoration-none text-white display-4 fw-bold" href="./album.html?id=${selection.album.id}">${selection.album.title}</a>`;

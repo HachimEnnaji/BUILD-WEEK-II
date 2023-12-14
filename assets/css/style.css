@@ -57,9 +57,10 @@ body {
   background: rgba(148, 148, 148, 0.637);
 }
 
-#selectionTitleAlbumPage:hover {
+.hovering:hover {
   background-color: rgb(63, 63, 63);
   cursor: pointer;
+  border-radius: 5px;
 }
 
 li span,

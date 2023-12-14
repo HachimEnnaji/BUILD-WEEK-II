@@ -9,6 +9,34 @@ const arrArtist = [
   "Linkin-Park",
   "Oasis",
   "Drake",
+  "Katy-Perry",
+  "Laura-Pausini",
+  "Eros-Ramazzotti",
+  "Zucchero",
+  "Ariana-Grande",
+  "Alicia-Keys",
+  "Beyonce",
+  "Jay-Z",
+  "50-Cent",
+  "Lana-Del-Rey",
+  "The-Weeknd",
+  "Laday-Gaga",
+  "Ed-Sheeran",
+  "Harry-Styles",
+  "Bruno-Mars",
+  "Miley-Cirus",
+  "Charlie-Puth",
+  "Selena-Gomez",
+  "Shakira",
+  "Pink",
+  "John-Legend",
+  "Adam-Levine",
+  "Future",
+  "Billie-Eilish",
+  "Adele",
+  "Justin-Bieber",
+  "Dua-Lipa",
+  "Shawn-Mendes",
 ];
 const arrayAlbumID = [
   69874, 35475, 98745, 1596, 18475, 19587, 57250, 25874, 58746, 5874, 487659, 58746, 65874, 8452, 9587, 8540, 7677,
@@ -74,14 +102,13 @@ fetch(UrlArtist, options)
   })
   .then((data) => {
     const selection = data.data[1];
-    // console.log(UrlArtist);
-    // const img = document.getElementById("albumImg");
     const title = document.getElementById("albumTitle");
     const artist = document.getElementById("albumArtist");
     const textArtist = document.getElementById("textArtist");
     const linkArtistImg = document.getElementById("linkArtistImg");
-    linkArtistImg.innerHTML = `<a  class="text-decoration-none" href="./artist.html?q=${params}"><img src="${selection.album.cover_big}" alt="album foto" id="albumImg" /></a>`;
-    title.innerHTML = `<a  class="text-decoration-none text-white display-4 fw-bold" href="./artist.html?q=${params}">${selection.album.title}</a>`;
+    linkArtistImg.innerHTML = `<a  class="text-decoration-none" href="./album.html?id=${selection.album.id}"><img src="${selection.album.cover_big}" alt="album foto" id="albumImg" /></a>`;
+    // console.log(selection.album.id);
+    title.innerHTML = `<a  class="text-decoration-none text-white display-4 fw-bold" href="./album.html?id=${selection.album.id}">${selection.album.title}</a>`;
     artist.innerHTML = `<a class="text-decoration-none text-white"  href="./artist.html?q=${params}">${selection.artist.name}</a>`;
     textArtist.innerHTML = `<a class="text-decoration-none text-white"  href="./artist.html?q=${params}">${selection.artist.name}</a>`;
     const albums = document.querySelectorAll(".album");
@@ -90,7 +117,7 @@ fetch(UrlArtist, options)
       const albumImage = album.querySelector("img");
       const albumText = album.querySelector(".card-text");
       const link = album.querySelector(".link");
-      link.setAttribute("href", "./artist.html?id=" + data.data[indexOfArray].album.id);
+      link.setAttribute("href", "./album.html?id=" + data.data[indexOfArray].album.id);
       albumImage.setAttribute("src", `${data.data[indexOfArray].album.cover_big}`);
       albumText.innerHTML = `${data.data[indexOfArray].title}`;
     });
@@ -101,10 +128,8 @@ fetch(UrlArtist, options)
 
 const div = document.querySelectorAll(".playlist");
 div.forEach((element) => {
-  //   console.log(playlist.childNodes);
   const divImg = element.querySelector(" img");
   const divText = element.querySelector(" p");
-  //   console.log(divText);
   fetch(URL + playlist + arrayAlbumID[indexRandom(arrayAlbumID)], options)
     .then((response) => {
       if (!response.ok) {

@@ -159,6 +159,24 @@ fetch(UrlArtist, options)
       albumImage.setAttribute("src", `${data.data[indexOfArray].album.cover_big}`);
       albumText.innerHTML = `${data.data[indexOfArray].title}`;
     });
+    //                                                   ---------------------- aggiunta -
+    playButton.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
+
+    audio.addEventListener("timeupdate", () => {
+      const percentage = (100 / audio.duration) * audio.currentTime;
+      console.log(percentage);
+      const progressbar = document.querySelector(".progressPlay");
+      progressbar.style.width = percentage + "%";
+      console.log(progressbar);
+    });
+
+    //                                                   ---------------------- Fine aggiunta
   })
   .catch((Error) => {
     console.log("error" + Error);

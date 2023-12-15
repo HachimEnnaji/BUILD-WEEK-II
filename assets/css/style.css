@@ -41,10 +41,9 @@ body {
 }
 
 #backgroundAlbum {
-  background: rgb(255, 204, 35);
-  background: linear-gradient(180deg, rgb(255, 204, 35) 4%, rgb(41, 40, 40) 60%);
   height: 100vh;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -74,7 +73,7 @@ li span,
 
 #backgroundIndexArtist {
   height: 100vh;
-  overflow: auto;
+  overflow-y: auto;
   background: #171717;
 }
 @media (min-width: 768px) {
@@ -117,4 +116,8 @@ li span,
 .heart-badge {
   top: 45px;
   left: 45px;
+}
+
+.container .shadowHero {
+  text-shadow: 0 0 2px black;
 }/*# sourceMappingURL=style.css.map */

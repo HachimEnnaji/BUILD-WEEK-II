@@ -104,14 +104,14 @@ fetch(URL + search + paramsid, options)
       </div>
       <div class="col-5 p-0">
       <span class="badge tracklistTitle">
-      <button class=" border-0 bg-transparent text-white playSong" >${titoli[i]}</button>
+      <button class="ms-4 ms-md-2 ms-lg-0 border-0 bg-transparent text-white playSong" >${titoli[i]}</button>
       </span>
       </div>
       <div class="col-2 text-end p-0">
-      <span class="badge fw-normal tracklistRank">${arrTracklist[i]}</span>
+      <span class=" d-none d-md-block badge fw-normal tracklistRank">${arrTracklist[i]}</span>
       </div>
       <div class="col-3 text-end p-0">
-      <span class="badge fw-normal tracklistDuration">${duration[i]}</span>
+      <span class=" d-none d-md-block badge fw-normal tracklistDuration">${duration[i]}</span>
       </div>
       `;
     }

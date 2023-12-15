@@ -31,7 +31,9 @@
                 <i class="bi bi-three-dots text-light fs-4"></i>
                 <ul class="list-unstyled">
                   <li class="list-item my-2">
-                    <i class="bi bi-house-door-fill text-white text-opacity-75 fs-4"></i>
+                    <a class="text-decoration-none text-light opacity-75" href="./index.html">
+                      <i class="bi bi-house-door-fill text-white text-opacity-75 fs-4"></i
+                    ></a>
                     <span class="badge fw-bold text-light opacity-75 my-1 ms-2"
                       ><a class="text-decoration-none text-light opacity-75" href="./index.html">Home</a></span
                     >
@@ -140,7 +142,7 @@
             <div class="contain text-white">
               <div class="row ps-4">
                 <!-- hero divisa in 3 parte 1: immagine -->
-                <div class="col-2">
+                <div class="col-3 col-md-2">
                   <div class="container h-100 w-100 d-flex align-items-center">
                     <img
                       src="./assets/imgs/main/image-15.jpg"
@@ -156,8 +158,8 @@
 
                 <div class="col d-flex align-items-end">
                   <div class="container">
-                    <h3 class="badge text-uppercase">album</h3>
-                    <p class="display-1 fw-bold" id="title">Gioventù brucata</p>
+                    <h3 class="badge text-uppercase shadowHero">album</h3>
+                    <p class="display-1 fw-bold shadowHero" id="title">Gioventù brucata</p>
                     <div class="d-flex">
                       <div class="mx-2">
                         <img
@@ -170,7 +172,9 @@
                       </div>
                       <div class="d-flex">
                         <p class="m-0 pt-1">
-                          <span class="fw-bolder" id="artist">Pinguini tattici nucleari &#183;</span>
+                          <a class="text-decoration-none text-light opacity-75 fw-bold" href="" id="nomeArtista">
+                            <span class="fw-bolder" id="artist">Pinguini tattici nucleari &#183;</span></a
+                          >
                           <span id="year">2017</span> &#183; <span id="numberOfTrack">12</span> brani,
                           <span id="duration" class="opacity-75"></span>
                         </p>
@@ -216,9 +220,9 @@
                     </div>
                   </div>
 
-                  <div class="d-flex justify-content-between col-5 align-items-center">
+                  <div class="d-none d-md-flex justify-content-between col-5 align-items-center">
                     <div><p class="my-0 opacity-75">RIPRODUZIONI</p></div>
-                    <div class="opacity-75">1:23</div>
+                    <div class="opacity-75 pe-2"><i class="bi bi-clock"></i></div>
                   </div>
                 </div>
               </div>
@@ -259,7 +263,7 @@
 
         <!-- bottone -->
         <div class="d-none d-xl-inline-block col-1" id="col-right-sidebar">
-          <button type="button" class="btn btn-dark" id="btn-right-sidebar">Amici</button>
+          <button type="button" class="btn btn-dark badge" id="btn-right-sidebar">Amici</button>
 
           <!-- --- sidebar --- -->
           <div class="d-none bg-black" id="right-sidebar">
@@ -655,7 +659,9 @@
       <div class="row align-items-center px-5 py-3 bg-black bg-opacity-75">
         <div class="col">
           <div class="d-flex flex-column align-items-center">
-            <i class="bi bi-house-door-fill text-white text-opacity-75 fs-4"></i>
+            <a class="text-decoration-none text-light opacity-75" href="./index.html"
+              ><i class="bi bi-house-door-fill text-white text-opacity-75 fs-4"></i
+            ></a>
             <span class="badge fw-bold text-light opacity-75"
               ><a class="text-decoration-none text-light opacity-75" href="./index.html">Home</a></span
             >
@@ -696,5 +702,6 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
   </body>
 </html>

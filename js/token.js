@@ -1,5 +1,6 @@
 const URL = "https://deezerdevs-deezer.p.rapidapi.com/";
-const token = "59d4c99753msh78ad53efec66216p196072jsnf7e088b75eb8";
+const token = "8f76b272f2msh3aee6aa14119e3bp1a1f1bjsnf563f456d57b";
+
 const search = "search?q=";
 const playlist = "playlist/";
 const album = "album/";

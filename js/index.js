@@ -167,7 +167,7 @@ fetch(UrlArtist, options)
 const div = document.querySelectorAll(".playlist");
 div.forEach((element) => {
   const divImg = element.querySelector(" img");
-  const divText = element.querySelector(" p");
+  const divText = element.querySelector("p ");
   fetch(URL + playlist + arrayAlbumID[indexRandom(arrayAlbumID)], options)
     .then((response) => {
       if (!response.ok) {

@@ -45,6 +45,7 @@ fetch(newURL, options)
     const numberOfTrack = document.getElementById("numberOfTrack");
     const duration = document.getElementById("duration");
     const listTracks = albums.tracks.data;
+    const nomeArtista = document.getElementById("nomeArtista");
     // const titleTrack = document.getElementById("titleTrack");
     // const numberOfReproduction = document.getElementById("numberOfReproduction");
     // const durationTrack = document.getElementById("durationTrack");
@@ -56,8 +57,9 @@ fetch(newURL, options)
     year.innerHTML = albums.release_date.slice(0, 4);
     numberOfTrack.innerHTML = albums.nb_tracks;
     duration.innerHTML = convertMinutes(albums.duration);
+    nomeArtista.setAttribute("href", "./artist.html?q=" + albums.artist.name);
     // console.log(listTracks);
-
+    // ${ track.artist.name }
     const div = document.getElementById("selectionTitleAlbumPage");
     let counter = 1;
     div.innerHTML = "";
@@ -79,7 +81,7 @@ fetch(newURL, options)
           </div>
         </div>
 
-        <div class="d-flex justify-content-between col-5 align-items-center">
+        <div class="d-none d-md-flex justify-content-between col-5 align-items-center ">
           <div><p class="my-0 opacity-75">${track.rank}</p></div>
           <div class="opacity-75">${convertMinutes(track.duration)}</div>
         </div>
@@ -105,6 +107,20 @@ fetch(newURL, options)
       });
     });
 
+    const colorThief = new ColorThief();
+    const images = new Image();
+
+    images.crossOrigin = "Anonymous";
+    images.addEventListener("load", function () {
+      const coloreDominante = colorThief.getColor(images);
+      const rgbColor = `rgb(${coloreDominante.join(",")})`;
+
+      const backgroundAlbum = document.querySelector("#backgroundAlbum");
+      backgroundAlbum.style.backgroundColor = rgbColor;
+      console.log(rgbColor);
+    });
+
+    images.src = albums.cover_medium;
     // console.log(selection.album.cover_big);
     // const titleAlbum = document.getElementById("titleAlbum");
     // const nameArtist = document.getElementById("nameArtist");

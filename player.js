@@ -4,7 +4,7 @@ audio.addEventListener("loadedmetadata", () => {
   console.log(audio.duration);
 });
 
-const play = document.querySelector("#bottonazzo");
+const play = document.querySelector(".playSong");
 console.log(play);
 play.addEventListener("click", () => {
   if (audio.paused) {
@@ -21,3 +21,12 @@ audio.addEventListener("timeupdate", () => {
   progressbar.style.width = percentage + "%";
   console.log(progressbar);
 });
+// playButton.addEventListener("click", function () {
+//   const playerBarImg = document.getElementById("playeBarImg");
+//   console.log(selection.album.cover_big);
+//   const titleAlbum = document.getElementById("titleAlbum");
+//   const nameArtist = document.getElementById("nameArtist");
+//   playerBarImg.setAttribute("src", selection.album.cover_big);
+//   titleAlbum.innerHTML = selection.album.title;
+//   nameArtist.innerHTML = selection.artist.name;
+// });

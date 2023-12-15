@@ -100,6 +100,7 @@ fetch(UrlArtist, options)
     }
   })
   .then((data) => {
+    console.log(data);
     const selection = data.data[1];
     const title = document.getElementById("albumTitle");
     const artist = document.getElementById("albumArtist");
@@ -115,6 +116,14 @@ fetch(UrlArtist, options)
       playerBarImg.setAttribute("src", selection.album.cover_big);
       titleAlbum.innerHTML = selection.album.title;
       nameArtist.innerHTML = selection.artist.name;
+      const audio = document.createElement("audio");
+      const playerBar = document.getElementById("playerBar");
+      audio.style.display = "none";
+      audio.src = selection.preview;
+      audio.play();
+      playerBar.appendChild(audio);
+      console.log(playerBar);
+      console.log(audio);
     });
     linkArtistImg.innerHTML = `<a  class="text-decoration-none" href="./album.html?id=${selection.album.id}"><img src="${selection.album.cover_big}" alt="album foto" id="albumImg" /></a>`;
     // console.log(selection.album.id);

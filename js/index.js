@@ -123,10 +123,11 @@ fetch(UrlArtist, options)
       audio.style.display = "none";
       audio.src = selection.preview;
       audio.play();
+      playButton.innerHTML = "Pause";
+
       playButton.addEventListener("click", function () {
         if (audio.paused) {
           playButton.innerHTML = "Pause";
-
           audio.play();
         } else {
           playButton.innerHTML = "Play";

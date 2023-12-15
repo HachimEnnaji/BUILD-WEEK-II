@@ -3,7 +3,7 @@ convertMinutes(658);
 const params = new URLSearchParams(window.location.search).get("id");
 const newURL = URL.concat(album).concat(params);
 
-console.log(newURL);
+// console.log(newURL);
 document.addEventListener("DOMContentLoaded", function () {
   const closeButton = document.getElementById("close-right-sidebar");
   const contentContainer = document.getElementById("right-sidebar");
@@ -36,7 +36,7 @@ fetch(newURL, options)
     }
   })
   .then((albums) => {
-    console.log(albums);
+    // console.log(albums);
     const img = document.getElementById("img");
     const imgArtist = document.getElementById("imgArtist");
     const title = document.getElementById("title");
@@ -56,21 +56,23 @@ fetch(newURL, options)
     year.innerHTML = albums.release_date.slice(0, 4);
     numberOfTrack.innerHTML = albums.nb_tracks;
     duration.innerHTML = convertMinutes(albums.duration);
-    console.log(listTracks);
+    // console.log(listTracks);
 
     const div = document.getElementById("selectionTitleAlbumPage");
     let counter = 1;
     div.innerHTML = "";
+    // console.log(listTracks);
     listTracks.forEach((track) => {
+      // console.log(track);
       div.innerHTML += `<div class="d-flex justify-content-between hovering" >
         <div class="d-flex">
           <div class="h-100 pt-1">
             <h6 class="mt-2 opacity-75">${counter}</h6>
           </div>
           <div>
-            <strong class="m-0 ps-3"><button class=" border-0 bg-transparent text-white " onclick=" ${playSong(
-              track
-            )} " >${track.title}</button></strong>
+    <strong class="m-0 ps-3"><button class=" border-0 bg-transparent text-white " class="playSong">${
+      track.title
+    }</button></strong>
             <p class="m-0 ps-3 opacity-75"><a class="link-light text-decoration-none" href="./artist.html?q=${
               track.artist.name
             }">${track.artist.name}</a></p>
@@ -84,21 +86,35 @@ fetch(newURL, options)
       </div>`;
       counter++;
     });
+    // console.log(listTracks);
+    const playSongButtons = document.querySelectorAll(".playSong");
+    console.log(playSongButtons);
+    playSongButtons.forEach((button, index) => {
+      playSongButtons.addEventListener("click", function () {
+        const selectedTrack = listTracks[index];
+        // playSong(selectedTrack);
+        const playerBarImg = document.getElementById("playerBarImg");
+        const titleAlbum = document.getElementById("titleAlbum");
+        const nameArtist = document.getElementById("nameArtist");
+        playerBarImg.src = selectedTrack.album.cover_big;
+        titleAlbum.innerHTML = selectedTrack.title;
+        nameArtist.innerHTML = selectedTrack.artist.name;
+        console.log(playerBarImg);
+        console.log(titleAlbum);
+        console.log(nameArtist);
+      });
+    });
+
+    // console.log(selection.album.cover_big);
+    // const titleAlbum = document.getElementById("titleAlbum");
+    // const nameArtist = document.getElementById("nameArtist");
+    // // playerBarImg.src = object.album.cover_big;
+    // titleAlbum.innerHTML = object.title;
+    // nameArtist.innerHTML = object.name;
+    // });
 
     // div.appendChild(divtrack);
   })
   .catch((error) => {
     console.log("errore" + error);
   });
-
-function playSong(track) {
-  // console.log(track);
-  const playerBarImg = document.getElementById("playeBarImg");
-  console.log(playerBarImg);
-  // console.log(selection.album.cover_big);
-  const titleAlbum = document.getElementById("titleAlbum");
-  const nameArtist = document.getElementById("nameArtist");
-  playerBarImg.setAttribute("src", track.album.cover_big);
-  titleAlbum.innerHTML = track.title;
-  nameArtist.innerHTML = track.artist.name;
-}

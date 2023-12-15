@@ -116,14 +116,32 @@ fetch(UrlArtist, options)
       playerBarImg.setAttribute("src", selection.album.cover_big);
       titleAlbum.innerHTML = selection.album.title;
       nameArtist.innerHTML = selection.artist.name;
-      const audio = document.createElement("audio");
+
+      const audio = document.getElementById("audio");
       const playerBar = document.getElementById("playerBar");
+      const playStop = document.getElementById("playStop");
       audio.style.display = "none";
       audio.src = selection.preview;
       audio.play();
-      playerBar.appendChild(audio);
-      console.log(playerBar);
-      console.log(audio);
+      playButton.addEventListener("click", function () {
+        if (audio.paused) {
+          playButton.innerHTML = "Pause";
+
+          audio.play();
+        } else {
+          playButton.innerHTML = "Play";
+          audio.pause();
+        }
+      });
+
+      playStop.classList.toggle("bi-play-circle-fill");
+
+      playStop.classList.toggle("bi-pause-circle-fill");
+
+      // audio.load();
+
+      // audio.play();
+      // playerBar.appendChild(audio);
     });
     linkArtistImg.innerHTML = `<a  class="text-decoration-none" href="./album.html?id=${selection.album.id}"><img src="${selection.album.cover_big}" alt="album foto" id="albumImg" /></a>`;
     // console.log(selection.album.id);

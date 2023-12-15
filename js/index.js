@@ -124,10 +124,17 @@ fetch(UrlArtist, options)
       audio.src = selection.preview;
       audio.play();
       playButton.innerHTML = "Pause";
+      audio.addEventListener("timeupdate", () => {
+        const percentage = (100 / audio.duration) * audio.currentTime;
+
+        const progressbar = document.querySelector(".progressPlay");
+        progressbar.style.width = percentage + "%";
+      });
 
       playButton.addEventListener("click", function () {
         if (audio.paused) {
           playButton.innerHTML = "Pause";
+
           audio.play();
         } else {
           playButton.innerHTML = "Play";
@@ -160,21 +167,6 @@ fetch(UrlArtist, options)
       albumText.innerHTML = `${data.data[indexOfArray].title}`;
     });
     //                                                   ---------------------- aggiunta -
-    playButton.addEventListener("click", () => {
-      if (audio.paused) {
-        audio.play();
-      } else {
-        audio.pause();
-      }
-    });
-
-    audio.addEventListener("timeupdate", () => {
-      const percentage = (100 / audio.duration) * audio.currentTime;
-      console.log(percentage);
-      const progressbar = document.querySelector(".progressPlay");
-      progressbar.style.width = percentage + "%";
-      console.log(progressbar);
-    });
 
     //                                                   ---------------------- Fine aggiunta
   })

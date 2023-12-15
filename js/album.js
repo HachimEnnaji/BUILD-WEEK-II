@@ -68,7 +68,9 @@ fetch(newURL, options)
             <h6 class="mt-2 opacity-75">${counter}</h6>
           </div>
           <div>
-            <strong class="m-0 ps-3">${track.title}</strong>
+            <strong class="m-0 ps-3"><button class=" border-0 bg-transparent text-white " onclick=" ${playSong(
+              track
+            )} " >${track.title}</button></strong>
             <p class="m-0 ps-3 opacity-75"><a class="link-light text-decoration-none" href="./artist.html?q=${
               track.artist.name
             }">${track.artist.name}</a></p>
@@ -82,8 +84,21 @@ fetch(newURL, options)
       </div>`;
       counter++;
     });
+
     // div.appendChild(divtrack);
   })
   .catch((error) => {
     console.log("errore" + error);
   });
+
+function playSong(track) {
+  // console.log(track);
+  const playerBarImg = document.getElementById("playeBarImg");
+  console.log(playerBarImg);
+  // console.log(selection.album.cover_big);
+  const titleAlbum = document.getElementById("titleAlbum");
+  const nameArtist = document.getElementById("nameArtist");
+  playerBarImg.setAttribute("src", track.album.cover_big);
+  titleAlbum.innerHTML = track.title;
+  nameArtist.innerHTML = track.artist.name;
+}

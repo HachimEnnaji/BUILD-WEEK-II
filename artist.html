@@ -166,56 +166,8 @@
             <div class="container-fluid row justify-content-between mt-4">
               <div class="col-7">
                 <h6>Popolari</h6>
-                <div class="row mt-3 align-items-center">
-                  <!-- 1 -->
-                  <div class="col-1 text-end p-0 pe-2"><span class="badge fw-normal">1</span></div>
-                  <div class="col-1 p-0 my-1">
-                    <img class="tracklistImg" height="40px" src="./assets/imgs/main/image-1.jpg" alt="song cover" />
-                  </div>
-                  <div class="col-5 p-0"><span class="badge tracklistTitle">Title</span></div>
-                  <div class="col-2 text-end p-0"><span class="badge fw-normal tracklistRank">123.456</span></div>
-                  <div class="col-3 text-end p-0"><span class="badge fw-normal tracklistDuration">3:18</span></div>
-                  <!-- / 1 -->
-                  <!-- 2 -->
-
-                  <div class="col-1 text-end p-0 pe-2"><span class="badge fw-normal">2</span></div>
-                  <div class="col-1 p-0 my-1">
-                    <img class="tracklistImg" height="40px" src="./assets/imgs/main/image-1.jpg" alt="song cover" />
-                  </div>
-                  <div class="col-5 p-0"><span class="badge tracklistTitle">Title</span></div>
-                  <div class="col-2 text-end p-0"><span class="badge fw-normal tracklistRank">123.456</span></div>
-                  <div class="col-3 text-end p-0"><span class="badge fw-normal tracklistDuration">3:18</span></div>
-                  <!-- / 2 -->
-                  <!-- 3 -->
-                  <div class="col-1 text-end p-0 pe-2"><span class="badge fw-normal">3</span></div>
-                  <div class="col-1 p-0 my-1">
-                    <img class="tracklistImg" height="40px" src="./assets/imgs/main/image-1.jpg" alt="song cover" />
-                  </div>
-                  <div class="col-5 p-0"><span class="badge tracklistTitle">Title</span></div>
-                  <div class="col-2 text-end p-0"><span class="badge fw-normal tracklistRank">123.456</span></div>
-                  <div class="col-3 text-end p-0"><span class="badge fw-normal tracklistDuration">3:18</span></div>
-                  <!-- / 3 -->
-                  <!-- 4 -->
-                  <div class="col-1 text-end p-0 pe-2"><span class="badge fw-normal">4</span></div>
-                  <div class="col-1 p-0 my-1">
-                    <img class="tracklistImg" height="40px" src="./assets/imgs/main/image-1.jpg" alt="song cover" />
-                  </div>
-                  <div class="col-5 p-0"><span class="badge tracklistTitle">Title</span></div>
-                  <div class="col-2 text-end p-0"><span class="badge fw-normal tracklistRank">123.456</span></div>
-                  <div class="col-3 text-end p-0"><span class="badge fw-normal tracklistDuration">3:18</span></div>
-                  <!-- / 4 -->
-                  <!-- 5 -->
-                  <div class="col-1 text-end p-0 pe-2"><span class="badge fw-normal">5</span></div>
-                  <div class="col-1 p-0 my-1">
-                    <img class="tracklistImg" height="40px" src="./assets/imgs/main/image-1.jpg" alt="song cover" />
-                  </div>
-                  <div class="col-5 p-0"><span class="badge tracklistTitle">Title</span></div>
-                  <div class="col-2 text-end p-0"><span class="badge fw-normal tracklistRank">123.456</span></div>
-                  <div class="col-3 text-end p-0"><span class="badge fw-normal tracklistDuration">3:18</span></div>
-
-                  <!-- / 5 -->
-                  <!-- 5 -->
-                  <!-- / 5 -->
+                <div class="row mt-3 align-items-center" id="songs">
+                  <!-- inserimento canzoni -->
                 </div>
               </div>
 
@@ -575,29 +527,5 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const closeButton = document.getElementById("close-right-sidebar");
-        const contentContainer = document.getElementById("right-sidebar");
-        const colRightSidebar = document.getElementById("col-right-sidebar");
-
-        closeButton.addEventListener("click", function () {
-          contentContainer.classList.add("d-none");
-          colRightSidebar.classList.add("col-1");
-          colRightSidebar.classList.remove("col-2");
-          showButton.classList.remove("d-none");
-        });
-
-        const showButton = document.getElementById("btn-right-sidebar");
-        showButton.addEventListener("click", function () {
-          contentContainer.classList.remove("d-none");
-
-          colRightSidebar.classList.remove("col-1");
-          colRightSidebar.classList.add("col-2");
-
-          showButton.classList.add("d-none");
-        });
-      });
-    </script>
   </body>
 </html>

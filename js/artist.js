@@ -16,6 +16,29 @@ function convertMinutes(seconds) {
   return minuti + ":" + restingSeconds;
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  const closeButton = document.getElementById("close-right-sidebar");
+  const contentContainer = document.getElementById("right-sidebar");
+  const colRightSidebar = document.getElementById("col-right-sidebar");
+
+  closeButton.addEventListener("click", function () {
+    contentContainer.classList.add("d-none");
+    colRightSidebar.classList.add("col-1");
+    colRightSidebar.classList.remove("col-2");
+    showButton.classList.remove("d-none");
+  });
+
+  const showButton = document.getElementById("btn-right-sidebar");
+  showButton.addEventListener("click", function () {
+    contentContainer.classList.remove("d-none");
+
+    colRightSidebar.classList.remove("col-1");
+    colRightSidebar.classList.add("col-2");
+
+    showButton.classList.add("d-none");
+  });
+});
+
 fetch(URL + search + paramsid, options)
   .then((response) => {
     if (!response.ok) {
@@ -44,10 +67,16 @@ fetch(URL + search + paramsid, options)
     numberOfTrack.innerHTML = randomNumber(10);
     imgRounded.src = artist.artist.picture_small;
     let ogetto = object.data;
+    // let product = {
+    //   rank: 0,
+    //   album:{cover: null,},
+    //   duration: 0,
+    // };
     let arrTracklist = [0];
     let immagine = [0];
     let duration = [0];
     let titoli = [0];
+
     ogetto.forEach((tracklist) => {
       for (let i = 0; i < 1; i++) {
         if (tracklist.rank > arrTracklist[i]) {
@@ -59,18 +88,32 @@ fetch(URL + search + paramsid, options)
         }
       }
     });
+    arrTracklist.shift();
+    immagine.shift();
+    duration.shift();
+    titoli.shift();
 
-    // console.log(titoli, arrTracklist);
-
-    const tracklistImg = document.querySelectorAll(".tracklistImg");
-    const tracklistTitle = document.querySelectorAll(".tracklistTitle");
-    const tracklistRank = document.querySelectorAll(".tracklistRank");
-    const tracklistDuration = document.querySelectorAll(".tracklistDuration");
-    for (let i = 0; i < 5; i++) {
-      tracklistImg[i].src = immagine[i + 1];
-      tracklistTitle[i].innerHTML = titoli[i + 1];
-      tracklistRank[i].innerHTML = arrTracklist[i + 1];
-      tracklistDuration[i].innerHTML = duration[i + 1];
+    const songs = document.getElementById("songs");
+    for (let i = 0; i < 10; i++) {
+      songs.innerHTML += `
+      <div class="col-1 text-end p-0 pe-2">
+      <span class="badge fw-normal" >${i + 1}</span>
+      </div>
+      <div class="col-1 p-0 my-1">
+      <img class="tracklistImg" height="40px" src="${immagine[i]}" alt="song cover" />
+      </div>
+      <div class="col-5 p-0">
+      <span class="badge tracklistTitle">
+      <button class=" border-0 bg-transparent text-white playSong" >${titoli[i]}</button>
+      </span>
+      </div>
+      <div class="col-2 text-end p-0">
+      <span class="badge fw-normal tracklistRank">${arrTracklist[i]}</span>
+      </div>
+      <div class="col-3 text-end p-0">
+      <span class="badge fw-normal tracklistDuration">${duration[i]}</span>
+      </div>
+      `;
     }
   })
   .catch((error) => {

@@ -51,7 +51,7 @@ body {
   background: rgb(255, 204, 35);
   background: linear-gradient(180deg, rgba(255, 204, 35, 1) 4%, rgba(41, 40, 40, 1) 60%);
   height: 100vh;
-  overflow: scroll;
+  overflow: auto;
 }
 
 ::-webkit-scrollbar {
@@ -80,13 +80,37 @@ li span,
 }
 
 #backgroundIndexArtist {
-  background: #292828;
   height: 100vh;
-  overflow: scroll;
+  overflow: auto;
+
+  background: #171717;
+
+  @media (min-width: 768px) {
+    background: #292828; // Grigio scuro sopra i 768px
+  }
 }
-// #background {
-//   background-position: center;
-// }
+
+#backgroundIndexArtist,
+#backgroundAlbum {
+  margin-bottom: 100px;
+}
+
+#center-row2 img {
+  height: 100px;
+
+  @media (max-width: 576px) {
+    height: 60px;
+  }
+}
+
+.plusbg {
+  padding-inline: 15px;
+  margin-inline: -15px;
+}
+
+.h-40 {
+  height: 40%;
+}
 
 .bg-gray {
   background-color: #292828;

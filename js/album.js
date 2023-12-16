@@ -72,7 +72,7 @@ fetch(newURL, options)
             <h6 class="mt-2 opacity-75">${counter}</h6>
           </div>
           <div>
-    <strong class="m-0 ps-3"><button class=" border-0 bg-transparent text-white " class="playSong">${
+    <strong class="m-0 ps-3"><button class=" border-0 bg-transparent text-white playSong ">${
       track.title
     }</button></strong>
             <p class="m-0 ps-3 opacity-75"><a class="link-light text-decoration-none" href="./artist.html?q=${
@@ -88,16 +88,18 @@ fetch(newURL, options)
       </div>`;
       counter++;
     });
-    // console.log(listTracks);
+
+    // mi aggancio ai bottoni creati in template literals .playsong e poi ciclo tutto per poter stampare nel player bar nome titolo canzon efoto e far psrtire preview della canzone
+
     const playSongButtons = document.querySelectorAll(".playSong");
-    console.log(playSongButtons);
     playSongButtons.forEach((button, index) => {
-      playSongButtons.addEventListener("click", function () {
+      button.addEventListener("click", function () {
         const selectedTrack = listTracks[index];
+        console.log(selectedTrack);
         // playSong(selectedTrack);
-        const playerBarImg = document.getElementById("playerBarImg");
-        const titleAlbum = document.getElementById("titleAlbum");
-        const nameArtist = document.getElementById("nameArtist");
+        const playerBarImg = document.getElementById("playerBarImgo");
+        const titleAlbum = document.getElementById("titleAlbumo");
+        const nameArtist = document.getElementById("nameArtisto");
         playerBarImg.src = selectedTrack.album.cover_big;
         titleAlbum.innerHTML = selectedTrack.title;
         nameArtist.innerHTML = selectedTrack.artist.name;

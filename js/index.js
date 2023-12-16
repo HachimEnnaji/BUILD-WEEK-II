@@ -1,4 +1,4 @@
-import { URL, token, options, search, playlist } from "./token.js";
+import { URL, token, options, search, playlist, convertMinutes } from "./token.js";
 
 const arrArtist = [
   "Eminem",
@@ -100,17 +100,17 @@ fetch(UrlArtist, options)
     }
   })
   .then((data) => {
-    console.log(data);
+    // console.log(data);
     const selection = data.data[1];
     const title = document.getElementById("albumTitle");
     const artist = document.getElementById("albumArtist");
     const textArtist = document.getElementById("textArtist");
     const linkArtistImg = document.getElementById("linkArtistImg");
     const playButton = document.getElementById("playButton");
-    console.log(playButton);
+    // console.log(playButton);
     playButton.addEventListener("click", function () {
       const playerBarImg = document.getElementById("playeBarImg");
-      console.log(selection.album.cover_big);
+      // console.log(selection.album.cover_big);
       const titleAlbum = document.getElementById("titleAlbum");
       const nameArtist = document.getElementById("nameArtist");
       playerBarImg.setAttribute("src", selection.album.cover_big);
@@ -120,12 +120,18 @@ fetch(UrlArtist, options)
       const audio = document.getElementById("audio");
       const playerBar = document.getElementById("playerBar");
       const playStop = document.getElementById("playStop");
+      const currentTime = document.getElementById("currentTime");
+      const totalTime = document.getElementById("totalTime");
+
       audio.style.display = "none";
       audio.src = selection.preview;
       audio.play();
       playButton.innerHTML = "Pause";
       audio.addEventListener("timeupdate", () => {
         const percentage = (100 / audio.duration) * audio.currentTime;
+        // audio.currentTime.innerHTML = audio.currentTime < 10 ? "0" + audio.currentTime : audio.currentTime;
+        currentTime.innerHTML = convertMinutes(parseInt(audio.currentTime));
+        totalTime.innerHTML = "0:" + parseInt(audio.duration);
 
         const progressbar = document.querySelector(".progressPlay");
         progressbar.style.width = percentage + "%";
@@ -157,7 +163,7 @@ fetch(UrlArtist, options)
     artist.innerHTML = `<a class="text-decoration-none text-white"  href="./artist.html?q=${params}">${selection.artist.name}</a>`;
     textArtist.innerHTML = `<a class="text-decoration-none text-white"  href="./artist.html?q=${params}">${selection.artist.name}</a>`;
     const albums = document.querySelectorAll(".album");
-    console.log(albums);
+    // console.log(albums);
     albums.forEach((album, indexOfArray) => {
       const albumImage = album.querySelector("img");
       const albumText = album.querySelector(".card-text");
